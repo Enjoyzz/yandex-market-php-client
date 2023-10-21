@@ -34,7 +34,7 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
     }
   ],
   "require": {
-    "Enjoyzz/yandex-market-php-client": "*@dev"
+    "enjoyzz/yandex-market-php-client": "*@dev"
   }
 }
 ```

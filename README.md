@@ -94,41 +94,60 @@ Class | Method | HTTP request | Description
 *BidsApi* | [**getBidsRecommendations**](docs/Api/BidsApi.md#getbidsrecommendations) | **POST** /businesses/{businessId}/bids/recommendations | Рекомендованные ставки для заданных товаров
 *BidsApi* | [**putBidsForBusiness**](docs/Api/BidsApi.md#putbidsforbusiness) | **PUT** /businesses/{businessId}/bids | Включение буста продаж и установка ставок
 *BidsApi* | [**putBidsForCampaign**](docs/Api/BidsApi.md#putbidsforcampaign) | **PUT** /campaigns/{campaignId}/bids | Включение буста продаж и установка ставок для магазина
+*BusinessOfferMappingsApi* | [**addOffersToArchive**](docs/Api/BusinessOfferMappingsApi.md#addofferstoarchive) | **POST** /businesses/{businessId}/offer-mappings/archive | Добавление товаров в архив
 *BusinessOfferMappingsApi* | [**deleteOffers**](docs/Api/BusinessOfferMappingsApi.md#deleteoffers) | **POST** /businesses/{businessId}/offer-mappings/delete | Удаление товаров из каталога
+*BusinessOfferMappingsApi* | [**deleteOffersFromArchive**](docs/Api/BusinessOfferMappingsApi.md#deleteoffersfromarchive) | **POST** /businesses/{businessId}/offer-mappings/unarchive | Восстановление товаров из архива
 *BusinessOfferMappingsApi* | [**getOfferMappings**](docs/Api/BusinessOfferMappingsApi.md#getoffermappings) | **POST** /businesses/{businessId}/offer-mappings | Информация о товарах в каталоге
 *BusinessOfferMappingsApi* | [**getSuggestedOfferMappings**](docs/Api/BusinessOfferMappingsApi.md#getsuggestedoffermappings) | **POST** /businesses/{businessId}/offer-mappings/suggestions | Предварительный просмотр карточек на Маркете, соответствующих вашим товарам
 *BusinessOfferMappingsApi* | [**updateOfferMappings**](docs/Api/BusinessOfferMappingsApi.md#updateoffermappings) | **POST** /businesses/{businessId}/offer-mappings/update | Добавление товаров в каталог и редактирование информации о них
+*BusinessesApi* | [**getBusinessSettings**](docs/Api/BusinessesApi.md#getbusinesssettings) | **POST** /businesses/{businessId}/settings | Настройки кабинета
 *CampaignsApi* | [**getCampaign**](docs/Api/CampaignsApi.md#getcampaign) | **GET** /campaigns/{campaignId} | Информация о магазине
 *CampaignsApi* | [**getCampaignLogins**](docs/Api/CampaignsApi.md#getcampaignlogins) | **GET** /campaigns/{campaignId}/logins | Логины, связанные с магазином
 *CampaignsApi* | [**getCampaignRegion**](docs/Api/CampaignsApi.md#getcampaignregion) | **GET** /campaigns/{campaignId}/region | Регион магазина
 *CampaignsApi* | [**getCampaignSettings**](docs/Api/CampaignsApi.md#getcampaignsettings) | **GET** /campaigns/{campaignId}/settings | Настройки магазина
 *CampaignsApi* | [**getCampaigns**](docs/Api/CampaignsApi.md#getcampaigns) | **GET** /campaigns | Магазины пользователя
 *CampaignsApi* | [**getCampaignsByLogin**](docs/Api/CampaignsApi.md#getcampaignsbylogin) | **GET** /campaigns/by_login/{login} | Магазины, доступные логину
+*CategoriesApi* | [**getCategoriesTree**](docs/Api/CategoriesApi.md#getcategoriestree) | **POST** /categories/tree | Дерево категорий
+*ChatsApi* | [**createChat**](docs/Api/ChatsApi.md#createchat) | **POST** /businesses/{businessId}/chats/new | Создание нового чата с покупателем
+*ChatsApi* | [**getChatHistory**](docs/Api/ChatsApi.md#getchathistory) | **POST** /businesses/{businessId}/chats/history | Получение истории сообщений в чате
+*ChatsApi* | [**getChats**](docs/Api/ChatsApi.md#getchats) | **POST** /businesses/{businessId}/chats | Получение доступных чатов
+*ChatsApi* | [**sendFileToChat**](docs/Api/ChatsApi.md#sendfiletochat) | **POST** /businesses/{businessId}/chats/file/send | Отправка файла в чат
+*ChatsApi* | [**sendMessageToChat**](docs/Api/ChatsApi.md#sendmessagetochat) | **POST** /businesses/{businessId}/chats/message | Отправка сообщения в чат
 *ContentApi* | [**getCategoryContentParameters**](docs/Api/ContentApi.md#getcategorycontentparameters) | **POST** /category/{categoryId}/parameters | Списки характеристик товаров по категориям
 *ContentApi* | [**getOfferCardsContentStatus**](docs/Api/ContentApi.md#getoffercardscontentstatus) | **POST** /businesses/{businessId}/offer-cards | Получение информации о заполненности карточек
 *ContentApi* | [**updateOfferContent**](docs/Api/ContentApi.md#updateoffercontent) | **POST** /businesses/{businessId}/offer-cards/update | Редактирование категорийных характеристик товара
-*DbsApi* | [**acceptOrderCancellation**](docs/Api/DbsApi.md#acceptordercancellation) | **PUT** /campaigns/{campaignId}/orders/{orderId}/cancellation/accept | Отмена заказа покупателем
+*DbsApi* | [**acceptOrderCancellation**](docs/Api/DbsApi.md#acceptordercancellation) | **PUT** /campaigns/{campaignId}/orders/{orderId}/cancellation/accept | Отмена заказа покупателем (DBS)
 *DbsApi* | [**addHiddenOffers**](docs/Api/DbsApi.md#addhiddenoffers) | **POST** /campaigns/{campaignId}/hidden-offers | Скрытие товаров и настройки скрытия
-*DbsApi* | [**confirmBusinessPrices**](docs/Api/DbsApi.md#confirmbusinessprices) | **POST** /businesses/{businessId}/price-quarantine/confirm | Подтверждение цены товара, попавшего в карантин (основная цена)
-*DbsApi* | [**confirmCampaignPrices**](docs/Api/DbsApi.md#confirmcampaignprices) | **POST** /campaigns/{campaignId}/price-quarantine/confirm | Подтверждение цены товара, попавшего в карантин (цена в магазине)
+*DbsApi* | [**addOffersToArchive**](docs/Api/DbsApi.md#addofferstoarchive) | **POST** /businesses/{businessId}/offer-mappings/archive | Добавление товаров в архив
+*DbsApi* | [**calculateTariffs**](docs/Api/DbsApi.md#calculatetariffs) | **POST** /tariffs/calculate | Калькулятор стоимости услуг
+*DbsApi* | [**confirmBusinessPrices**](docs/Api/DbsApi.md#confirmbusinessprices) | **POST** /businesses/{businessId}/price-quarantine/confirm | Подтверждение цены на товар, попавшего в карантин (основная цена)
+*DbsApi* | [**confirmCampaignPrices**](docs/Api/DbsApi.md#confirmcampaignprices) | **POST** /campaigns/{campaignId}/price-quarantine/confirm | Подтверждение цены на товар, попавшего в карантин (цена в магазине)
+*DbsApi* | [**createChat**](docs/Api/DbsApi.md#createchat) | **POST** /businesses/{businessId}/chats/new | Создание нового чата с покупателем
 *DbsApi* | [**createOutlet**](docs/Api/DbsApi.md#createoutlet) | **POST** /campaigns/{campaignId}/outlets | Создание точки продаж
 *DbsApi* | [**deleteCampaignOffers**](docs/Api/DbsApi.md#deletecampaignoffers) | **POST** /campaigns/{campaignId}/offers/delete | Удаление товаров из ассортимента магазина
 *DbsApi* | [**deleteHiddenOffers**](docs/Api/DbsApi.md#deletehiddenoffers) | **DELETE** /campaigns/{campaignId}/hidden-offers | Возобновление показа товаров
 *DbsApi* | [**deleteOffers**](docs/Api/DbsApi.md#deleteoffers) | **POST** /businesses/{businessId}/offer-mappings/delete | Удаление товаров из каталога
+*DbsApi* | [**deleteOffersFromArchive**](docs/Api/DbsApi.md#deleteoffersfromarchive) | **POST** /businesses/{businessId}/offer-mappings/unarchive | Восстановление товаров из архива
 *DbsApi* | [**deleteOutlet**](docs/Api/DbsApi.md#deleteoutlet) | **DELETE** /campaigns/{campaignId}/outlets/{outletId} | Удаление точки продаж
 *DbsApi* | [**deleteOutletLicenses**](docs/Api/DbsApi.md#deleteoutletlicenses) | **DELETE** /campaigns/{campaignId}/outlets/licenses | Удаление лицензий для точек продаж
+*DbsApi* | [**generateBoostConsolidatedReport**](docs/Api/DbsApi.md#generateboostconsolidatedreport) | **POST** /reports/boost-consolidated/generate | Отчет по бусту продаж
+*DbsApi* | [**generateCompetitorsPositionReport**](docs/Api/DbsApi.md#generatecompetitorspositionreport) | **POST** /reports/competitors-position/generate | Отчет «Конкурентная позиция»
 *DbsApi* | [**generateGoodsRealizationReport**](docs/Api/DbsApi.md#generategoodsrealizationreport) | **POST** /reports/goods-realization/generate | Отчет по реализации
-*DbsApi* | [**generateOrderLabel**](docs/Api/DbsApi.md#generateorderlabel) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/shipments/{shipmentId}/boxes/{boxId}/label | Ярлык‑наклейка на отдельное грузовое место в заказе
-*DbsApi* | [**generateOrderLabels**](docs/Api/DbsApi.md#generateorderlabels) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/labels | Ярлыки‑наклейки на все грузовые места в заказе
+*DbsApi* | [**generateMassOrderLabelsReport**](docs/Api/DbsApi.md#generatemassorderlabelsreport) | **POST** /reports/documents/labels/generate | Ярлыки‑наклейки на все коробки в нескольких заказах
+*DbsApi* | [**generateOrderLabel**](docs/Api/DbsApi.md#generateorderlabel) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/shipments/{shipmentId}/boxes/{boxId}/label | Ярлык‑наклейка для коробки в заказе
+*DbsApi* | [**generateOrderLabels**](docs/Api/DbsApi.md#generateorderlabels) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/labels | Ярлыки‑наклейки на все коробки в одном заказе
 *DbsApi* | [**generatePricesReport**](docs/Api/DbsApi.md#generatepricesreport) | **POST** /reports/prices/generate | Отчет «Цены на рынке»
+*DbsApi* | [**generateShelfsStatisticsReport**](docs/Api/DbsApi.md#generateshelfsstatisticsreport) | **POST** /reports/shelf-statistics/generate | Отчет по полкам
 *DbsApi* | [**generateShowsSalesReport**](docs/Api/DbsApi.md#generateshowssalesreport) | **POST** /reports/shows-sales/generate | Отчет «Аналитика продаж»
 *DbsApi* | [**generateStocksOnWarehousesReport**](docs/Api/DbsApi.md#generatestocksonwarehousesreport) | **POST** /reports/stocks-on-warehouses/generate | Отчет по остаткам на складах
 *DbsApi* | [**generateUnitedMarketplaceServicesReport**](docs/Api/DbsApi.md#generateunitedmarketplaceservicesreport) | **POST** /reports/united-marketplace-services/generate | Отчет по стоимости услуг
 *DbsApi* | [**generateUnitedNettingReport**](docs/Api/DbsApi.md#generateunitednettingreport) | **POST** /reports/united-netting/generate | Отчет по платежам
+*DbsApi* | [**generateUnitedOrdersReport**](docs/Api/DbsApi.md#generateunitedordersreport) | **POST** /reports/united-orders/generate | Отчет по заказам
 *DbsApi* | [**getAllOffers**](docs/Api/DbsApi.md#getalloffers) | **GET** /campaigns/{campaignId}/offers/all | Все предложения магазина
 *DbsApi* | [**getBidsInfoForBusiness**](docs/Api/DbsApi.md#getbidsinfoforbusiness) | **POST** /businesses/{businessId}/bids/info | Информация об установленных ставках
 *DbsApi* | [**getBidsRecommendations**](docs/Api/DbsApi.md#getbidsrecommendations) | **POST** /businesses/{businessId}/bids/recommendations | Рекомендованные ставки для заданных товаров
 *DbsApi* | [**getBusinessQuarantineOffers**](docs/Api/DbsApi.md#getbusinessquarantineoffers) | **POST** /businesses/{businessId}/price-quarantine | Список товаров, находящихся в карантине (основная цена)
+*DbsApi* | [**getBusinessSettings**](docs/Api/DbsApi.md#getbusinesssettings) | **POST** /businesses/{businessId}/settings | Настройки кабинета
 *DbsApi* | [**getCampaign**](docs/Api/DbsApi.md#getcampaign) | **GET** /campaigns/{campaignId} | Информация о магазине
 *DbsApi* | [**getCampaignFeedCategories**](docs/Api/DbsApi.md#getcampaignfeedcategories) | **GET** /campaigns/{campaignId}/feeds/categories | Категории магазина
 *DbsApi* | [**getCampaignLogins**](docs/Api/DbsApi.md#getcampaignlogins) | **GET** /campaigns/{campaignId}/logins | Логины, связанные с магазином
@@ -138,7 +157,10 @@ Class | Method | HTTP request | Description
 *DbsApi* | [**getCampaignSettings**](docs/Api/DbsApi.md#getcampaignsettings) | **GET** /campaigns/{campaignId}/settings | Настройки магазина
 *DbsApi* | [**getCampaigns**](docs/Api/DbsApi.md#getcampaigns) | **GET** /campaigns | Магазины пользователя
 *DbsApi* | [**getCampaignsByLogin**](docs/Api/DbsApi.md#getcampaignsbylogin) | **GET** /campaigns/by_login/{login} | Магазины, доступные логину
+*DbsApi* | [**getCategoriesTree**](docs/Api/DbsApi.md#getcategoriestree) | **POST** /categories/tree | Дерево категорий
 *DbsApi* | [**getCategoryContentParameters**](docs/Api/DbsApi.md#getcategorycontentparameters) | **POST** /category/{categoryId}/parameters | Списки характеристик товаров по категориям
+*DbsApi* | [**getChatHistory**](docs/Api/DbsApi.md#getchathistory) | **POST** /businesses/{businessId}/chats/history | Получение истории сообщений в чате
+*DbsApi* | [**getChats**](docs/Api/DbsApi.md#getchats) | **POST** /businesses/{businessId}/chats | Получение доступных чатов
 *DbsApi* | [**getDeliveryServices**](docs/Api/DbsApi.md#getdeliveryservices) | **GET** /delivery/services | Справочник служб доставки
 *DbsApi* | [**getFeed**](docs/Api/DbsApi.md#getfeed) | **GET** /campaigns/{campaignId}/feeds/{feedId} | Информация о прайс-листе
 *DbsApi* | [**getFeedCategories**](docs/Api/DbsApi.md#getfeedcategories) | **GET** /campaigns/{campaignId}/feeds/{feedId}/categories | Категории прайс-листа
@@ -156,23 +178,25 @@ Class | Method | HTTP request | Description
 *DbsApi* | [**getOfferRecommendations**](docs/Api/DbsApi.md#getofferrecommendations) | **POST** /businesses/{businessId}/offers/recommendations | Рекомендации Маркета, касающиеся цен
 *DbsApi* | [**getOffers**](docs/Api/DbsApi.md#getoffers) | **GET** /campaigns/{campaignId}/offers | Предложения магазина
 *DbsApi* | [**getOrder**](docs/Api/DbsApi.md#getorder) | **GET** /campaigns/{campaignId}/orders/{orderId} | Информация о заказе
-*DbsApi* | [**getOrderBuyerInfo**](docs/Api/DbsApi.md#getorderbuyerinfo) | **GET** /campaigns/{campaignId}/orders/{orderId}/buyer | Информация о покупателе
+*DbsApi* | [**getOrderBuyerInfo**](docs/Api/DbsApi.md#getorderbuyerinfo) | **GET** /campaigns/{campaignId}/orders/{orderId}/buyer | Информация о покупателе — физическом лице (DBS)
+*DbsApi* | [**getOrderLabelsData**](docs/Api/DbsApi.md#getorderlabelsdata) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/labels/data | Информация на ярлыках‑наклейках
 *DbsApi* | [**getOrders**](docs/Api/DbsApi.md#getorders) | **GET** /campaigns/{campaignId}/orders | Информация о заказах
-*DbsApi* | [**getOrdersStats**](docs/Api/DbsApi.md#getordersstats) | **POST** /campaigns/{campaignId}/stats/orders | Отчет по заказам
+*DbsApi* | [**getOrdersStats**](docs/Api/DbsApi.md#getordersstats) | **POST** /campaigns/{campaignId}/stats/orders | Детальная информация по заказам
 *DbsApi* | [**getOutlet**](docs/Api/DbsApi.md#getoutlet) | **GET** /campaigns/{campaignId}/outlets/{outletId} | Информация о точке продаж
 *DbsApi* | [**getOutletLicenses**](docs/Api/DbsApi.md#getoutletlicenses) | **GET** /campaigns/{campaignId}/outlets/licenses | Информация о лицензиях для точек продаж
 *DbsApi* | [**getOutlets**](docs/Api/DbsApi.md#getoutlets) | **GET** /campaigns/{campaignId}/outlets | Информация о точках продаж
 *DbsApi* | [**getPrices**](docs/Api/DbsApi.md#getprices) | **GET** /campaigns/{campaignId}/offer-prices | Список цен
-*DbsApi* | [**getPricesByOfferIds**](docs/Api/DbsApi.md#getpricesbyofferids) | **POST** /campaigns/{campaignId}/offer-prices | Просмотр установленных в магазине цен
+*DbsApi* | [**getPricesByOfferIds**](docs/Api/DbsApi.md#getpricesbyofferids) | **POST** /campaigns/{campaignId}/offer-prices | Просмотр цен на указанные товары в магазине
 *DbsApi* | [**getReportInfo**](docs/Api/DbsApi.md#getreportinfo) | **GET** /reports/info/{reportId} | Статус генерации и скачивание готовых отчетов
 *DbsApi* | [**getReturn**](docs/Api/DbsApi.md#getreturn) | **GET** /campaigns/{campaignId}/orders/{orderId}/returns/{returnId} | Информация о возврате или невыкупе
 *DbsApi* | [**getReturnApplication**](docs/Api/DbsApi.md#getreturnapplication) | **GET** /campaigns/{campaignId}/orders/{orderId}/returns/{returnId}/application | Получение заявления на возврат
 *DbsApi* | [**getReturnPhoto**](docs/Api/DbsApi.md#getreturnphoto) | **GET** /campaigns/{campaignId}/orders/{orderId}/returns/{returnId}/decision/{itemId}/image/{imageHash} | Получение фотографии возврата
 *DbsApi* | [**getReturns**](docs/Api/DbsApi.md#getreturns) | **GET** /campaigns/{campaignId}/returns | Список возвратов и невыкупов
+*DbsApi* | [**getStocks**](docs/Api/DbsApi.md#getstocks) | **POST** /campaigns/{campaignId}/offers/stocks | Информация об остатках и оборачиваемости
 *DbsApi* | [**getSuggestedOfferMappings**](docs/Api/DbsApi.md#getsuggestedoffermappings) | **POST** /businesses/{businessId}/offer-mappings/suggestions | Предварительный просмотр карточек на Маркете, соответствующих вашим товарам
 *DbsApi* | [**getWarehouses**](docs/Api/DbsApi.md#getwarehouses) | **GET** /businesses/{businessId}/warehouses | Список складов и групп складов
 *DbsApi* | [**provideOrderDigitalCodes**](docs/Api/DbsApi.md#provideorderdigitalcodes) | **POST** /campaigns/{campaignId}/orders/{orderId}/deliverDigitalGoods | Передача ключей цифровых товаров
-*DbsApi* | [**provideOrderItemIdentifiers**](docs/Api/DbsApi.md#provideorderitemidentifiers) | **PUT** /campaigns/{campaignId}/orders/{orderId}/identifiers | Передача уникальных кодов маркировки единиц товара
+*DbsApi* | [**provideOrderItemIdentifiers**](docs/Api/DbsApi.md#provideorderitemidentifiers) | **PUT** /campaigns/{campaignId}/orders/{orderId}/identifiers | Передача уникальных кодов маркировки единиц товара (DBS)
 *DbsApi* | [**putBidsForBusiness**](docs/Api/DbsApi.md#putbidsforbusiness) | **PUT** /businesses/{businessId}/bids | Включение буста продаж и установка ставок
 *DbsApi* | [**putBidsForCampaign**](docs/Api/DbsApi.md#putbidsforcampaign) | **PUT** /campaigns/{campaignId}/bids | Включение буста продаж и установка ставок для магазина
 *DbsApi* | [**refreshFeed**](docs/Api/DbsApi.md#refreshfeed) | **POST** /campaigns/{campaignId}/feeds/{feedId}/refresh | Сообщить, что прайс-лист обновился
@@ -180,17 +204,19 @@ Class | Method | HTTP request | Description
 *DbsApi* | [**searchRegionChildren**](docs/Api/DbsApi.md#searchregionchildren) | **GET** /regions/{regionId}/children | Информация о дочерних регионах
 *DbsApi* | [**searchRegionsById**](docs/Api/DbsApi.md#searchregionsbyid) | **GET** /regions/{regionId} | Информация о регионе
 *DbsApi* | [**searchRegionsByName**](docs/Api/DbsApi.md#searchregionsbyname) | **GET** /regions | Метод для поиска регионов по их имени
+*DbsApi* | [**sendFileToChat**](docs/Api/DbsApi.md#sendfiletochat) | **POST** /businesses/{businessId}/chats/file/send | Отправка файла в чат
+*DbsApi* | [**sendMessageToChat**](docs/Api/DbsApi.md#sendmessagetochat) | **POST** /businesses/{businessId}/chats/message | Отправка сообщения в чат
 *DbsApi* | [**setFeedParams**](docs/Api/DbsApi.md#setfeedparams) | **POST** /campaigns/{campaignId}/feeds/{feedId}/params | Изменение параметров прайс-листа
 *DbsApi* | [**setOrderDeliveryDate**](docs/Api/DbsApi.md#setorderdeliverydate) | **PUT** /campaigns/{campaignId}/orders/{orderId}/delivery/date | Изменение даты доставки заказа
-*DbsApi* | [**setOrderDeliveryTrackCode**](docs/Api/DbsApi.md#setorderdeliverytrackcode) | **POST** /campaigns/{campaignId}/orders/{orderId}/delivery/track | Передача трек‑номера посылки
-*DbsApi* | [**setOrderShipmentBoxes**](docs/Api/DbsApi.md#setordershipmentboxes) | **PUT** /campaigns/{campaignId}/orders/{orderId}/delivery/shipments/{shipmentId}/boxes | Передача количества грузовых мест в заказе
+*DbsApi* | [**setOrderDeliveryTrackCode**](docs/Api/DbsApi.md#setorderdeliverytrackcode) | **POST** /campaigns/{campaignId}/orders/{orderId}/delivery/track | Передача трек‑номера посылки (DBS)
+*DbsApi* | [**setOrderShipmentBoxes**](docs/Api/DbsApi.md#setordershipmentboxes) | **PUT** /campaigns/{campaignId}/orders/{orderId}/delivery/shipments/{shipmentId}/boxes | Передача количества грузовых мест в заказе (DBS)
 *DbsApi* | [**setReturnDecision**](docs/Api/DbsApi.md#setreturndecision) | **POST** /campaigns/{campaignId}/orders/{orderId}/returns/{returnId}/decision | Принятие/изменение решения по позиции в возврате
 *DbsApi* | [**submitReturnDecision**](docs/Api/DbsApi.md#submitreturndecision) | **POST** /campaigns/{campaignId}/orders/{orderId}/returns/{returnId}/decision/submit | Подтверждение решения по возвратным позициям
 *DbsApi* | [**updateBusinessPrices**](docs/Api/DbsApi.md#updatebusinessprices) | **POST** /businesses/{businessId}/offer-prices/updates | Установка цен
 *DbsApi* | [**updateCampaignOffers**](docs/Api/DbsApi.md#updatecampaignoffers) | **POST** /campaigns/{campaignId}/offers/update | Настройка размещения товаров в магазине
 *DbsApi* | [**updateOfferContent**](docs/Api/DbsApi.md#updateoffercontent) | **POST** /businesses/{businessId}/offer-cards/update | Редактирование категорийных характеристик товара
 *DbsApi* | [**updateOfferMappings**](docs/Api/DbsApi.md#updateoffermappings) | **POST** /businesses/{businessId}/offer-mappings/update | Добавление товаров в каталог и редактирование информации о них
-*DbsApi* | [**updateOrderItems**](docs/Api/DbsApi.md#updateorderitems) | **PUT** /campaigns/{campaignId}/orders/{orderId}/items | Удаление товара из заказа или уменьшение числа единиц
+*DbsApi* | [**updateOrderItems**](docs/Api/DbsApi.md#updateorderitems) | **PUT** /campaigns/{campaignId}/orders/{orderId}/items | Удаление товара из заказа или уменьшение числа единиц (DBS)
 *DbsApi* | [**updateOrderStatus**](docs/Api/DbsApi.md#updateorderstatus) | **PUT** /campaigns/{campaignId}/orders/{orderId}/status | Изменение статуса заказа
 *DbsApi* | [**updateOrderStatuses**](docs/Api/DbsApi.md#updateorderstatuses) | **POST** /campaigns/{campaignId}/orders/status-update | Изменение статусов заказа
 *DbsApi* | [**updateOrderStorageLimit**](docs/Api/DbsApi.md#updateorderstoragelimit) | **PUT** /campaigns/{campaignId}/orders/{orderId}/delivery/storage-limit | Продление срока хранения заказа
@@ -199,28 +225,41 @@ Class | Method | HTTP request | Description
 *DbsApi* | [**updatePrices**](docs/Api/DbsApi.md#updateprices) | **POST** /campaigns/{campaignId}/offer-prices/updates | Установка цен на товары в конкретном магазине
 *DbsApi* | [**updateStocks**](docs/Api/DbsApi.md#updatestocks) | **PUT** /campaigns/{campaignId}/offers/stocks | Передача информации об остатках
 *DeliveryServicesApi* | [**getDeliveryServices**](docs/Api/DeliveryServicesApi.md#getdeliveryservices) | **GET** /delivery/services | Справочник служб доставки
-*ExpressApi* | [**confirmBusinessPrices**](docs/Api/ExpressApi.md#confirmbusinessprices) | **POST** /businesses/{businessId}/price-quarantine/confirm | Подтверждение цены товара, попавшего в карантин (основная цена)
-*ExpressApi* | [**confirmCampaignPrices**](docs/Api/ExpressApi.md#confirmcampaignprices) | **POST** /campaigns/{campaignId}/price-quarantine/confirm | Подтверждение цены товара, попавшего в карантин (цена в магазине)
+*ExpressApi* | [**addOffersToArchive**](docs/Api/ExpressApi.md#addofferstoarchive) | **POST** /businesses/{businessId}/offer-mappings/archive | Добавление товаров в архив
+*ExpressApi* | [**calculateTariffs**](docs/Api/ExpressApi.md#calculatetariffs) | **POST** /tariffs/calculate | Калькулятор стоимости услуг
+*ExpressApi* | [**confirmBusinessPrices**](docs/Api/ExpressApi.md#confirmbusinessprices) | **POST** /businesses/{businessId}/price-quarantine/confirm | Подтверждение цены на товар, попавшего в карантин (основная цена)
+*ExpressApi* | [**confirmCampaignPrices**](docs/Api/ExpressApi.md#confirmcampaignprices) | **POST** /campaigns/{campaignId}/price-quarantine/confirm | Подтверждение цены на товар, попавшего в карантин (цена в магазине)
+*ExpressApi* | [**createChat**](docs/Api/ExpressApi.md#createchat) | **POST** /businesses/{businessId}/chats/new | Создание нового чата с покупателем
 *ExpressApi* | [**deleteCampaignOffers**](docs/Api/ExpressApi.md#deletecampaignoffers) | **POST** /campaigns/{campaignId}/offers/delete | Удаление товаров из ассортимента магазина
 *ExpressApi* | [**deleteOffers**](docs/Api/ExpressApi.md#deleteoffers) | **POST** /businesses/{businessId}/offer-mappings/delete | Удаление товаров из каталога
+*ExpressApi* | [**deleteOffersFromArchive**](docs/Api/ExpressApi.md#deleteoffersfromarchive) | **POST** /businesses/{businessId}/offer-mappings/unarchive | Восстановление товаров из архива
+*ExpressApi* | [**generateBoostConsolidatedReport**](docs/Api/ExpressApi.md#generateboostconsolidatedreport) | **POST** /reports/boost-consolidated/generate | Отчет по бусту продаж
+*ExpressApi* | [**generateCompetitorsPositionReport**](docs/Api/ExpressApi.md#generatecompetitorspositionreport) | **POST** /reports/competitors-position/generate | Отчет «Конкурентная позиция»
 *ExpressApi* | [**generateGoodsRealizationReport**](docs/Api/ExpressApi.md#generategoodsrealizationreport) | **POST** /reports/goods-realization/generate | Отчет по реализации
-*ExpressApi* | [**generateOrderLabel**](docs/Api/ExpressApi.md#generateorderlabel) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/shipments/{shipmentId}/boxes/{boxId}/label | Ярлык‑наклейка на отдельное грузовое место в заказе
-*ExpressApi* | [**generateOrderLabels**](docs/Api/ExpressApi.md#generateorderlabels) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/labels | Ярлыки‑наклейки на все грузовые места в заказе
+*ExpressApi* | [**generateMassOrderLabelsReport**](docs/Api/ExpressApi.md#generatemassorderlabelsreport) | **POST** /reports/documents/labels/generate | Ярлыки‑наклейки на все коробки в нескольких заказах
+*ExpressApi* | [**generateOrderLabel**](docs/Api/ExpressApi.md#generateorderlabel) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/shipments/{shipmentId}/boxes/{boxId}/label | Ярлык‑наклейка для коробки в заказе
+*ExpressApi* | [**generateOrderLabels**](docs/Api/ExpressApi.md#generateorderlabels) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/labels | Ярлыки‑наклейки на все коробки в одном заказе
 *ExpressApi* | [**generatePricesReport**](docs/Api/ExpressApi.md#generatepricesreport) | **POST** /reports/prices/generate | Отчет «Цены на рынке»
+*ExpressApi* | [**generateShelfsStatisticsReport**](docs/Api/ExpressApi.md#generateshelfsstatisticsreport) | **POST** /reports/shelf-statistics/generate | Отчет по полкам
 *ExpressApi* | [**generateShowsSalesReport**](docs/Api/ExpressApi.md#generateshowssalesreport) | **POST** /reports/shows-sales/generate | Отчет «Аналитика продаж»
 *ExpressApi* | [**generateStocksOnWarehousesReport**](docs/Api/ExpressApi.md#generatestocksonwarehousesreport) | **POST** /reports/stocks-on-warehouses/generate | Отчет по остаткам на складах
 *ExpressApi* | [**generateUnitedMarketplaceServicesReport**](docs/Api/ExpressApi.md#generateunitedmarketplaceservicesreport) | **POST** /reports/united-marketplace-services/generate | Отчет по стоимости услуг
 *ExpressApi* | [**generateUnitedNettingReport**](docs/Api/ExpressApi.md#generateunitednettingreport) | **POST** /reports/united-netting/generate | Отчет по платежам
+*ExpressApi* | [**generateUnitedOrdersReport**](docs/Api/ExpressApi.md#generateunitedordersreport) | **POST** /reports/united-orders/generate | Отчет по заказам
 *ExpressApi* | [**getBidsInfoForBusiness**](docs/Api/ExpressApi.md#getbidsinfoforbusiness) | **POST** /businesses/{businessId}/bids/info | Информация об установленных ставках
 *ExpressApi* | [**getBidsRecommendations**](docs/Api/ExpressApi.md#getbidsrecommendations) | **POST** /businesses/{businessId}/bids/recommendations | Рекомендованные ставки для заданных товаров
 *ExpressApi* | [**getBusinessQuarantineOffers**](docs/Api/ExpressApi.md#getbusinessquarantineoffers) | **POST** /businesses/{businessId}/price-quarantine | Список товаров, находящихся в карантине (основная цена)
+*ExpressApi* | [**getBusinessSettings**](docs/Api/ExpressApi.md#getbusinesssettings) | **POST** /businesses/{businessId}/settings | Настройки кабинета
 *ExpressApi* | [**getCampaign**](docs/Api/ExpressApi.md#getcampaign) | **GET** /campaigns/{campaignId} | Информация о магазине
 *ExpressApi* | [**getCampaignLogins**](docs/Api/ExpressApi.md#getcampaignlogins) | **GET** /campaigns/{campaignId}/logins | Логины, связанные с магазином
 *ExpressApi* | [**getCampaignOffers**](docs/Api/ExpressApi.md#getcampaignoffers) | **POST** /campaigns/{campaignId}/offers | Список товаров, размещенных в заданном магазине, с параметрами размещения
 *ExpressApi* | [**getCampaignQuarantineOffers**](docs/Api/ExpressApi.md#getcampaignquarantineoffers) | **POST** /campaigns/{campaignId}/price-quarantine | Список товаров, находящихся в карантине (цена в магазине)
 *ExpressApi* | [**getCampaigns**](docs/Api/ExpressApi.md#getcampaigns) | **GET** /campaigns | Магазины пользователя
 *ExpressApi* | [**getCampaignsByLogin**](docs/Api/ExpressApi.md#getcampaignsbylogin) | **GET** /campaigns/by_login/{login} | Магазины, доступные логину
+*ExpressApi* | [**getCategoriesTree**](docs/Api/ExpressApi.md#getcategoriestree) | **POST** /categories/tree | Дерево категорий
 *ExpressApi* | [**getCategoryContentParameters**](docs/Api/ExpressApi.md#getcategorycontentparameters) | **POST** /category/{categoryId}/parameters | Списки характеристик товаров по категориям
+*ExpressApi* | [**getChatHistory**](docs/Api/ExpressApi.md#getchathistory) | **POST** /businesses/{businessId}/chats/history | Получение истории сообщений в чате
+*ExpressApi* | [**getChats**](docs/Api/ExpressApi.md#getchats) | **POST** /businesses/{businessId}/chats | Получение доступных чатов
 *ExpressApi* | [**getDeliveryServices**](docs/Api/ExpressApi.md#getdeliveryservices) | **GET** /delivery/services | Справочник служб доставки
 *ExpressApi* | [**getGoodsStats**](docs/Api/ExpressApi.md#getgoodsstats) | **POST** /campaigns/{campaignId}/stats/skus | Отчет по товарам
 *ExpressApi* | [**getOfferCardsContentStatus**](docs/Api/ExpressApi.md#getoffercardscontentstatus) | **POST** /businesses/{businessId}/offer-cards | Получение информации о заполненности карточек
@@ -230,63 +269,81 @@ Class | Method | HTTP request | Description
 *ExpressApi* | [**getOrder**](docs/Api/ExpressApi.md#getorder) | **GET** /campaigns/{campaignId}/orders/{orderId} | Информация о заказе
 *ExpressApi* | [**getOrderLabelsData**](docs/Api/ExpressApi.md#getorderlabelsdata) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/labels/data | Информация на ярлыках‑наклейках
 *ExpressApi* | [**getOrders**](docs/Api/ExpressApi.md#getorders) | **GET** /campaigns/{campaignId}/orders | Информация о заказах
-*ExpressApi* | [**getOrdersStats**](docs/Api/ExpressApi.md#getordersstats) | **POST** /campaigns/{campaignId}/stats/orders | Отчет по заказам
+*ExpressApi* | [**getOrdersStats**](docs/Api/ExpressApi.md#getordersstats) | **POST** /campaigns/{campaignId}/stats/orders | Детальная информация по заказам
 *ExpressApi* | [**getPrices**](docs/Api/ExpressApi.md#getprices) | **GET** /campaigns/{campaignId}/offer-prices | Список цен
-*ExpressApi* | [**getPricesByOfferIds**](docs/Api/ExpressApi.md#getpricesbyofferids) | **POST** /campaigns/{campaignId}/offer-prices | Просмотр установленных в магазине цен
+*ExpressApi* | [**getPricesByOfferIds**](docs/Api/ExpressApi.md#getpricesbyofferids) | **POST** /campaigns/{campaignId}/offer-prices | Просмотр цен на указанные товары в магазине
 *ExpressApi* | [**getReportInfo**](docs/Api/ExpressApi.md#getreportinfo) | **GET** /reports/info/{reportId} | Статус генерации и скачивание готовых отчетов
 *ExpressApi* | [**getReturn**](docs/Api/ExpressApi.md#getreturn) | **GET** /campaigns/{campaignId}/orders/{orderId}/returns/{returnId} | Информация о возврате или невыкупе
 *ExpressApi* | [**getReturnApplication**](docs/Api/ExpressApi.md#getreturnapplication) | **GET** /campaigns/{campaignId}/orders/{orderId}/returns/{returnId}/application | Получение заявления на возврат
 *ExpressApi* | [**getReturnPhoto**](docs/Api/ExpressApi.md#getreturnphoto) | **GET** /campaigns/{campaignId}/orders/{orderId}/returns/{returnId}/decision/{itemId}/image/{imageHash} | Получение фотографии возврата
 *ExpressApi* | [**getReturns**](docs/Api/ExpressApi.md#getreturns) | **GET** /campaigns/{campaignId}/returns | Список возвратов и невыкупов
+*ExpressApi* | [**getStocks**](docs/Api/ExpressApi.md#getstocks) | **POST** /campaigns/{campaignId}/offers/stocks | Информация об остатках и оборачиваемости
 *ExpressApi* | [**getSuggestedOfferMappingEntries**](docs/Api/ExpressApi.md#getsuggestedoffermappingentries) | **POST** /campaigns/{campaignId}/offer-mapping-entries/suggestions | Рекомендованные карточки для ваших товаров
 *ExpressApi* | [**getSuggestedOfferMappings**](docs/Api/ExpressApi.md#getsuggestedoffermappings) | **POST** /businesses/{businessId}/offer-mappings/suggestions | Предварительный просмотр карточек на Маркете, соответствующих вашим товарам
 *ExpressApi* | [**getSuggestedPrices**](docs/Api/ExpressApi.md#getsuggestedprices) | **POST** /campaigns/{campaignId}/offer-prices/suggestions | Цены для продвижения товаров
 *ExpressApi* | [**getWarehouses**](docs/Api/ExpressApi.md#getwarehouses) | **GET** /businesses/{businessId}/warehouses | Список складов и групп складов
-*ExpressApi* | [**provideOrderItemIdentifiers**](docs/Api/ExpressApi.md#provideorderitemidentifiers) | **PUT** /campaigns/{campaignId}/orders/{orderId}/identifiers | Передача уникальных кодов маркировки единиц товара
+*ExpressApi* | [**provideOrderItemIdentifiers**](docs/Api/ExpressApi.md#provideorderitemidentifiers) | **PUT** /campaigns/{campaignId}/orders/{orderId}/identifiers | Передача уникальных кодов маркировки единиц товара (DBS)
 *ExpressApi* | [**putBidsForBusiness**](docs/Api/ExpressApi.md#putbidsforbusiness) | **PUT** /businesses/{businessId}/bids | Включение буста продаж и установка ставок
-*ExpressApi* | [**setOrderShipmentBoxes**](docs/Api/ExpressApi.md#setordershipmentboxes) | **PUT** /campaigns/{campaignId}/orders/{orderId}/delivery/shipments/{shipmentId}/boxes | Передача количества грузовых мест в заказе
+*ExpressApi* | [**sendFileToChat**](docs/Api/ExpressApi.md#sendfiletochat) | **POST** /businesses/{businessId}/chats/file/send | Отправка файла в чат
+*ExpressApi* | [**sendMessageToChat**](docs/Api/ExpressApi.md#sendmessagetochat) | **POST** /businesses/{businessId}/chats/message | Отправка сообщения в чат
+*ExpressApi* | [**setOrderBoxLayout**](docs/Api/ExpressApi.md#setorderboxlayout) | **PUT** /campaigns/{campaignId}/orders/{orderId}/boxes | Подготовка заказа (FBS)
+*ExpressApi* | [**setOrderShipmentBoxes**](docs/Api/ExpressApi.md#setordershipmentboxes) | **PUT** /campaigns/{campaignId}/orders/{orderId}/delivery/shipments/{shipmentId}/boxes | Передача количества грузовых мест в заказе (DBS)
 *ExpressApi* | [**updateBusinessPrices**](docs/Api/ExpressApi.md#updatebusinessprices) | **POST** /businesses/{businessId}/offer-prices/updates | Установка цен
 *ExpressApi* | [**updateCampaignOffers**](docs/Api/ExpressApi.md#updatecampaignoffers) | **POST** /campaigns/{campaignId}/offers/update | Настройка размещения товаров в магазине
 *ExpressApi* | [**updateOfferContent**](docs/Api/ExpressApi.md#updateoffercontent) | **POST** /businesses/{businessId}/offer-cards/update | Редактирование категорийных характеристик товара
 *ExpressApi* | [**updateOfferMappingEntries**](docs/Api/ExpressApi.md#updateoffermappingentries) | **POST** /campaigns/{campaignId}/offer-mapping-entries/updates | Добавление и редактирование товаров в каталоге
 *ExpressApi* | [**updateOfferMappings**](docs/Api/ExpressApi.md#updateoffermappings) | **POST** /businesses/{businessId}/offer-mappings/update | Добавление товаров в каталог и редактирование информации о них
-*ExpressApi* | [**updateOrderItems**](docs/Api/ExpressApi.md#updateorderitems) | **PUT** /campaigns/{campaignId}/orders/{orderId}/items | Удаление товара из заказа или уменьшение числа единиц
+*ExpressApi* | [**updateOrderItems**](docs/Api/ExpressApi.md#updateorderitems) | **PUT** /campaigns/{campaignId}/orders/{orderId}/items | Удаление товара из заказа или уменьшение числа единиц (DBS)
 *ExpressApi* | [**updateOrderStatus**](docs/Api/ExpressApi.md#updateorderstatus) | **PUT** /campaigns/{campaignId}/orders/{orderId}/status | Изменение статуса заказа
 *ExpressApi* | [**updateOrderStatuses**](docs/Api/ExpressApi.md#updateorderstatuses) | **POST** /campaigns/{campaignId}/orders/status-update | Изменение статусов заказа
 *ExpressApi* | [**updatePrices**](docs/Api/ExpressApi.md#updateprices) | **POST** /campaigns/{campaignId}/offer-prices/updates | Установка цен на товары в конкретном магазине
 *ExpressApi* | [**updateStocks**](docs/Api/ExpressApi.md#updatestocks) | **PUT** /campaigns/{campaignId}/offers/stocks | Передача информации об остатках
 *ExpressApi* | [**verifyOrderEac**](docs/Api/ExpressApi.md#verifyordereac) | **PUT** /campaigns/{campaignId}/orders/{orderId}/verifyEac | Передача кода проверки
 *FbsApi* | [**addHiddenOffers**](docs/Api/FbsApi.md#addhiddenoffers) | **POST** /campaigns/{campaignId}/hidden-offers | Скрытие товаров и настройки скрытия
-*FbsApi* | [**confirmBusinessPrices**](docs/Api/FbsApi.md#confirmbusinessprices) | **POST** /businesses/{businessId}/price-quarantine/confirm | Подтверждение цены товара, попавшего в карантин (основная цена)
-*FbsApi* | [**confirmCampaignPrices**](docs/Api/FbsApi.md#confirmcampaignprices) | **POST** /campaigns/{campaignId}/price-quarantine/confirm | Подтверждение цены товара, попавшего в карантин (цена в магазине)
+*FbsApi* | [**addOffersToArchive**](docs/Api/FbsApi.md#addofferstoarchive) | **POST** /businesses/{businessId}/offer-mappings/archive | Добавление товаров в архив
+*FbsApi* | [**calculateTariffs**](docs/Api/FbsApi.md#calculatetariffs) | **POST** /tariffs/calculate | Калькулятор стоимости услуг
+*FbsApi* | [**confirmBusinessPrices**](docs/Api/FbsApi.md#confirmbusinessprices) | **POST** /businesses/{businessId}/price-quarantine/confirm | Подтверждение цены на товар, попавшего в карантин (основная цена)
+*FbsApi* | [**confirmCampaignPrices**](docs/Api/FbsApi.md#confirmcampaignprices) | **POST** /campaigns/{campaignId}/price-quarantine/confirm | Подтверждение цены на товар, попавшего в карантин (цена в магазине)
 *FbsApi* | [**confirmShipment**](docs/Api/FbsApi.md#confirmshipment) | **POST** /campaigns/{campaignId}/first-mile/shipments/{shipmentId}/confirm | Подтверждение отгрузки
+*FbsApi* | [**createChat**](docs/Api/FbsApi.md#createchat) | **POST** /businesses/{businessId}/chats/new | Создание нового чата с покупателем
 *FbsApi* | [**deleteCampaignOffers**](docs/Api/FbsApi.md#deletecampaignoffers) | **POST** /campaigns/{campaignId}/offers/delete | Удаление товаров из ассортимента магазина
 *FbsApi* | [**deleteHiddenOffers**](docs/Api/FbsApi.md#deletehiddenoffers) | **DELETE** /campaigns/{campaignId}/hidden-offers | Возобновление показа товаров
 *FbsApi* | [**deleteOffers**](docs/Api/FbsApi.md#deleteoffers) | **POST** /businesses/{businessId}/offer-mappings/delete | Удаление товаров из каталога
+*FbsApi* | [**deleteOffersFromArchive**](docs/Api/FbsApi.md#deleteoffersfromarchive) | **POST** /businesses/{businessId}/offer-mappings/unarchive | Восстановление товаров из архива
 *FbsApi* | [**downloadShipmentAct**](docs/Api/FbsApi.md#downloadshipmentact) | **GET** /campaigns/{campaignId}/first-mile/shipments/{shipmentId}/act | Получение акта приема-передачи
 *FbsApi* | [**downloadShipmentDiscrepancyAct**](docs/Api/FbsApi.md#downloadshipmentdiscrepancyact) | **GET** /campaigns/{campaignId}/first-mile/shipments/{shipmentId}/discrepancy-act | Получение акта расхождений
 *FbsApi* | [**downloadShipmentInboundAct**](docs/Api/FbsApi.md#downloadshipmentinboundact) | **GET** /campaigns/{campaignId}/first-mile/shipments/{shipmentId}/inbound-act | Получение фактического акта приема-передачи
 *FbsApi* | [**downloadShipmentPalletLabels**](docs/Api/FbsApi.md#downloadshipmentpalletlabels) | **GET** /campaigns/{campaignId}/first-mile/shipments/{shipmentId}/pallet/labels | Ярлыки на все упаковки в отгрузке
 *FbsApi* | [**downloadShipmentReceptionTransferAct**](docs/Api/FbsApi.md#downloadshipmentreceptiontransferact) | **GET** /campaigns/{campaignId}/shipments/reception-transfer-act | Подтверждение ближайшей отгрузки и получение акта приема-передачи для нее
 *FbsApi* | [**downloadShipmentTransportationWaybill**](docs/Api/FbsApi.md#downloadshipmenttransportationwaybill) | **GET** /campaigns/{campaignId}/first-mile/shipments/{shipmentId}/transportation-waybill | Получение транспортной накладной
+*FbsApi* | [**generateBoostConsolidatedReport**](docs/Api/FbsApi.md#generateboostconsolidatedreport) | **POST** /reports/boost-consolidated/generate | Отчет по бусту продаж
+*FbsApi* | [**generateCompetitorsPositionReport**](docs/Api/FbsApi.md#generatecompetitorspositionreport) | **POST** /reports/competitors-position/generate | Отчет «Конкурентная позиция»
 *FbsApi* | [**generateGoodsRealizationReport**](docs/Api/FbsApi.md#generategoodsrealizationreport) | **POST** /reports/goods-realization/generate | Отчет по реализации
-*FbsApi* | [**generateOrderLabel**](docs/Api/FbsApi.md#generateorderlabel) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/shipments/{shipmentId}/boxes/{boxId}/label | Ярлык‑наклейка на отдельное грузовое место в заказе
-*FbsApi* | [**generateOrderLabels**](docs/Api/FbsApi.md#generateorderlabels) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/labels | Ярлыки‑наклейки на все грузовые места в заказе
+*FbsApi* | [**generateMassOrderLabelsReport**](docs/Api/FbsApi.md#generatemassorderlabelsreport) | **POST** /reports/documents/labels/generate | Ярлыки‑наклейки на все коробки в нескольких заказах
+*FbsApi* | [**generateOrderLabel**](docs/Api/FbsApi.md#generateorderlabel) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/shipments/{shipmentId}/boxes/{boxId}/label | Ярлык‑наклейка для коробки в заказе
+*FbsApi* | [**generateOrderLabels**](docs/Api/FbsApi.md#generateorderlabels) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/labels | Ярлыки‑наклейки на все коробки в одном заказе
 *FbsApi* | [**generatePricesReport**](docs/Api/FbsApi.md#generatepricesreport) | **POST** /reports/prices/generate | Отчет «Цены на рынке»
+*FbsApi* | [**generateShelfsStatisticsReport**](docs/Api/FbsApi.md#generateshelfsstatisticsreport) | **POST** /reports/shelf-statistics/generate | Отчет по полкам
+*FbsApi* | [**generateShipmentListDocumentReport**](docs/Api/FbsApi.md#generateshipmentlistdocumentreport) | **POST** /reports/documents/shipment-list/generate | Лист сборки
 *FbsApi* | [**generateShowsSalesReport**](docs/Api/FbsApi.md#generateshowssalesreport) | **POST** /reports/shows-sales/generate | Отчет «Аналитика продаж»
 *FbsApi* | [**generateStocksOnWarehousesReport**](docs/Api/FbsApi.md#generatestocksonwarehousesreport) | **POST** /reports/stocks-on-warehouses/generate | Отчет по остаткам на складах
 *FbsApi* | [**generateUnitedMarketplaceServicesReport**](docs/Api/FbsApi.md#generateunitedmarketplaceservicesreport) | **POST** /reports/united-marketplace-services/generate | Отчет по стоимости услуг
 *FbsApi* | [**generateUnitedNettingReport**](docs/Api/FbsApi.md#generateunitednettingreport) | **POST** /reports/united-netting/generate | Отчет по платежам
+*FbsApi* | [**generateUnitedOrdersReport**](docs/Api/FbsApi.md#generateunitedordersreport) | **POST** /reports/united-orders/generate | Отчет по заказам
 *FbsApi* | [**getBidsInfoForBusiness**](docs/Api/FbsApi.md#getbidsinfoforbusiness) | **POST** /businesses/{businessId}/bids/info | Информация об установленных ставках
 *FbsApi* | [**getBidsRecommendations**](docs/Api/FbsApi.md#getbidsrecommendations) | **POST** /businesses/{businessId}/bids/recommendations | Рекомендованные ставки для заданных товаров
 *FbsApi* | [**getBusinessQuarantineOffers**](docs/Api/FbsApi.md#getbusinessquarantineoffers) | **POST** /businesses/{businessId}/price-quarantine | Список товаров, находящихся в карантине (основная цена)
+*FbsApi* | [**getBusinessSettings**](docs/Api/FbsApi.md#getbusinesssettings) | **POST** /businesses/{businessId}/settings | Настройки кабинета
 *FbsApi* | [**getCampaign**](docs/Api/FbsApi.md#getcampaign) | **GET** /campaigns/{campaignId} | Информация о магазине
 *FbsApi* | [**getCampaignLogins**](docs/Api/FbsApi.md#getcampaignlogins) | **GET** /campaigns/{campaignId}/logins | Логины, связанные с магазином
 *FbsApi* | [**getCampaignOffers**](docs/Api/FbsApi.md#getcampaignoffers) | **POST** /campaigns/{campaignId}/offers | Список товаров, размещенных в заданном магазине, с параметрами размещения
 *FbsApi* | [**getCampaignQuarantineOffers**](docs/Api/FbsApi.md#getcampaignquarantineoffers) | **POST** /campaigns/{campaignId}/price-quarantine | Список товаров, находящихся в карантине (цена в магазине)
 *FbsApi* | [**getCampaigns**](docs/Api/FbsApi.md#getcampaigns) | **GET** /campaigns | Магазины пользователя
 *FbsApi* | [**getCampaignsByLogin**](docs/Api/FbsApi.md#getcampaignsbylogin) | **GET** /campaigns/by_login/{login} | Магазины, доступные логину
+*FbsApi* | [**getCategoriesTree**](docs/Api/FbsApi.md#getcategoriestree) | **POST** /categories/tree | Дерево категорий
 *FbsApi* | [**getCategoryContentParameters**](docs/Api/FbsApi.md#getcategorycontentparameters) | **POST** /category/{categoryId}/parameters | Списки характеристик товаров по категориям
+*FbsApi* | [**getChatHistory**](docs/Api/FbsApi.md#getchathistory) | **POST** /businesses/{businessId}/chats/history | Получение истории сообщений в чате
+*FbsApi* | [**getChats**](docs/Api/FbsApi.md#getchats) | **POST** /businesses/{businessId}/chats | Получение доступных чатов
 *FbsApi* | [**getDeliveryServices**](docs/Api/FbsApi.md#getdeliveryservices) | **GET** /delivery/services | Справочник служб доставки
 *FbsApi* | [**getGoodsStats**](docs/Api/FbsApi.md#getgoodsstats) | **POST** /campaigns/{campaignId}/stats/skus | Отчет по товарам
 *FbsApi* | [**getHiddenOffers**](docs/Api/FbsApi.md#gethiddenoffers) | **GET** /campaigns/{campaignId}/hidden-offers | Информация о скрытых вами товарах
@@ -295,11 +352,13 @@ Class | Method | HTTP request | Description
 *FbsApi* | [**getOfferMappings**](docs/Api/FbsApi.md#getoffermappings) | **POST** /businesses/{businessId}/offer-mappings | Информация о товарах в каталоге
 *FbsApi* | [**getOfferRecommendations**](docs/Api/FbsApi.md#getofferrecommendations) | **POST** /businesses/{businessId}/offers/recommendations | Рекомендации Маркета, касающиеся цен
 *FbsApi* | [**getOrder**](docs/Api/FbsApi.md#getorder) | **GET** /campaigns/{campaignId}/orders/{orderId} | Информация о заказе
+*FbsApi* | [**getOrderBusinessBuyerInfo**](docs/Api/FbsApi.md#getorderbusinessbuyerinfo) | **POST** /campaigns/{campaignId}/orders/{orderId}/business-buyer | Информация о покупателе — юридическом лице
+*FbsApi* | [**getOrderBusinessDocumentsInfo**](docs/Api/FbsApi.md#getorderbusinessdocumentsinfo) | **POST** /campaigns/{campaignId}/orders/{orderId}/documents | Информация о документах
 *FbsApi* | [**getOrderLabelsData**](docs/Api/FbsApi.md#getorderlabelsdata) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/labels/data | Информация на ярлыках‑наклейках
 *FbsApi* | [**getOrders**](docs/Api/FbsApi.md#getorders) | **GET** /campaigns/{campaignId}/orders | Информация о заказах
-*FbsApi* | [**getOrdersStats**](docs/Api/FbsApi.md#getordersstats) | **POST** /campaigns/{campaignId}/stats/orders | Отчет по заказам
+*FbsApi* | [**getOrdersStats**](docs/Api/FbsApi.md#getordersstats) | **POST** /campaigns/{campaignId}/stats/orders | Детальная информация по заказам
 *FbsApi* | [**getPrices**](docs/Api/FbsApi.md#getprices) | **GET** /campaigns/{campaignId}/offer-prices | Список цен
-*FbsApi* | [**getPricesByOfferIds**](docs/Api/FbsApi.md#getpricesbyofferids) | **POST** /campaigns/{campaignId}/offer-prices | Просмотр установленных в магазине цен
+*FbsApi* | [**getPricesByOfferIds**](docs/Api/FbsApi.md#getpricesbyofferids) | **POST** /campaigns/{campaignId}/offer-prices | Просмотр цен на указанные товары в магазине
 *FbsApi* | [**getReportInfo**](docs/Api/FbsApi.md#getreportinfo) | **GET** /reports/info/{reportId} | Статус генерации и скачивание готовых отчетов
 *FbsApi* | [**getReturn**](docs/Api/FbsApi.md#getreturn) | **GET** /campaigns/{campaignId}/orders/{orderId}/returns/{returnId} | Информация о возврате или невыкупе
 *FbsApi* | [**getReturnApplication**](docs/Api/FbsApi.md#getreturnapplication) | **GET** /campaigns/{campaignId}/orders/{orderId}/returns/{returnId}/application | Получение заявления на возврат
@@ -312,13 +371,16 @@ Class | Method | HTTP request | Description
 *FbsApi* | [**getSuggestedOfferMappings**](docs/Api/FbsApi.md#getsuggestedoffermappings) | **POST** /businesses/{businessId}/offer-mappings/suggestions | Предварительный просмотр карточек на Маркете, соответствующих вашим товарам
 *FbsApi* | [**getSuggestedPrices**](docs/Api/FbsApi.md#getsuggestedprices) | **POST** /campaigns/{campaignId}/offer-prices/suggestions | Цены для продвижения товаров
 *FbsApi* | [**getWarehouses**](docs/Api/FbsApi.md#getwarehouses) | **GET** /businesses/{businessId}/warehouses | Список складов и групп складов
-*FbsApi* | [**provideOrderItemIdentifiers**](docs/Api/FbsApi.md#provideorderitemidentifiers) | **PUT** /campaigns/{campaignId}/orders/{orderId}/identifiers | Передача уникальных кодов маркировки единиц товара
+*FbsApi* | [**provideOrderItemIdentifiers**](docs/Api/FbsApi.md#provideorderitemidentifiers) | **PUT** /campaigns/{campaignId}/orders/{orderId}/identifiers | Передача уникальных кодов маркировки единиц товара (DBS)
 *FbsApi* | [**putBidsForBusiness**](docs/Api/FbsApi.md#putbidsforbusiness) | **PUT** /businesses/{businessId}/bids | Включение буста продаж и установка ставок
 *FbsApi* | [**searchRegionChildren**](docs/Api/FbsApi.md#searchregionchildren) | **GET** /regions/{regionId}/children | Информация о дочерних регионах
 *FbsApi* | [**searchRegionsById**](docs/Api/FbsApi.md#searchregionsbyid) | **GET** /regions/{regionId} | Информация о регионе
 *FbsApi* | [**searchRegionsByName**](docs/Api/FbsApi.md#searchregionsbyname) | **GET** /regions | Метод для поиска регионов по их имени
 *FbsApi* | [**searchShipments**](docs/Api/FbsApi.md#searchshipments) | **PUT** /campaigns/{campaignId}/first-mile/shipments | Получение информации об отгрузках
-*FbsApi* | [**setOrderShipmentBoxes**](docs/Api/FbsApi.md#setordershipmentboxes) | **PUT** /campaigns/{campaignId}/orders/{orderId}/delivery/shipments/{shipmentId}/boxes | Передача количества грузовых мест в заказе
+*FbsApi* | [**sendFileToChat**](docs/Api/FbsApi.md#sendfiletochat) | **POST** /businesses/{businessId}/chats/file/send | Отправка файла в чат
+*FbsApi* | [**sendMessageToChat**](docs/Api/FbsApi.md#sendmessagetochat) | **POST** /businesses/{businessId}/chats/message | Отправка сообщения в чат
+*FbsApi* | [**setOrderBoxLayout**](docs/Api/FbsApi.md#setorderboxlayout) | **PUT** /campaigns/{campaignId}/orders/{orderId}/boxes | Подготовка заказа (FBS)
+*FbsApi* | [**setOrderShipmentBoxes**](docs/Api/FbsApi.md#setordershipmentboxes) | **PUT** /campaigns/{campaignId}/orders/{orderId}/delivery/shipments/{shipmentId}/boxes | Передача количества грузовых мест в заказе (DBS)
 *FbsApi* | [**setShipmentPalletsCount**](docs/Api/FbsApi.md#setshipmentpalletscount) | **PUT** /campaigns/{campaignId}/first-mile/shipments/{shipmentId}/pallets | Передача количества упаковок в отгрузке
 *FbsApi* | [**transferOrdersFromShipment**](docs/Api/FbsApi.md#transferordersfromshipment) | **POST** /campaigns/{campaignId}/first-mile/shipments/{shipmentId}/orders/transfer | Перенос заказов в следующую отгрузку
 *FbsApi* | [**updateBusinessPrices**](docs/Api/FbsApi.md#updatebusinessprices) | **POST** /businesses/{businessId}/offer-prices/updates | Установка цен
@@ -326,36 +388,47 @@ Class | Method | HTTP request | Description
 *FbsApi* | [**updateOfferContent**](docs/Api/FbsApi.md#updateoffercontent) | **POST** /businesses/{businessId}/offer-cards/update | Редактирование категорийных характеристик товара
 *FbsApi* | [**updateOfferMappingEntries**](docs/Api/FbsApi.md#updateoffermappingentries) | **POST** /campaigns/{campaignId}/offer-mapping-entries/updates | Добавление и редактирование товаров в каталоге
 *FbsApi* | [**updateOfferMappings**](docs/Api/FbsApi.md#updateoffermappings) | **POST** /businesses/{businessId}/offer-mappings/update | Добавление товаров в каталог и редактирование информации о них
-*FbsApi* | [**updateOrderItems**](docs/Api/FbsApi.md#updateorderitems) | **PUT** /campaigns/{campaignId}/orders/{orderId}/items | Удаление товара из заказа или уменьшение числа единиц
+*FbsApi* | [**updateOrderItems**](docs/Api/FbsApi.md#updateorderitems) | **PUT** /campaigns/{campaignId}/orders/{orderId}/items | Удаление товара из заказа или уменьшение числа единиц (DBS)
 *FbsApi* | [**updateOrderStatus**](docs/Api/FbsApi.md#updateorderstatus) | **PUT** /campaigns/{campaignId}/orders/{orderId}/status | Изменение статуса заказа
 *FbsApi* | [**updateOrderStatuses**](docs/Api/FbsApi.md#updateorderstatuses) | **POST** /campaigns/{campaignId}/orders/status-update | Изменение статусов заказа
 *FbsApi* | [**updatePrices**](docs/Api/FbsApi.md#updateprices) | **POST** /campaigns/{campaignId}/offer-prices/updates | Установка цен на товары в конкретном магазине
 *FbsApi* | [**updateStocks**](docs/Api/FbsApi.md#updatestocks) | **PUT** /campaigns/{campaignId}/offers/stocks | Передача информации об остатках
 *FbyApi* | [**addHiddenOffers**](docs/Api/FbyApi.md#addhiddenoffers) | **POST** /campaigns/{campaignId}/hidden-offers | Скрытие товаров и настройки скрытия
-*FbyApi* | [**confirmBusinessPrices**](docs/Api/FbyApi.md#confirmbusinessprices) | **POST** /businesses/{businessId}/price-quarantine/confirm | Подтверждение цены товара, попавшего в карантин (основная цена)
-*FbyApi* | [**confirmCampaignPrices**](docs/Api/FbyApi.md#confirmcampaignprices) | **POST** /campaigns/{campaignId}/price-quarantine/confirm | Подтверждение цены товара, попавшего в карантин (цена в магазине)
-*FbyApi* | [**createFaasOrder**](docs/Api/FbyApi.md#createfaasorder) | **POST** /campaigns/{campaignId}/orders | Создание заказа
+*FbyApi* | [**addOffersToArchive**](docs/Api/FbyApi.md#addofferstoarchive) | **POST** /businesses/{businessId}/offer-mappings/archive | Добавление товаров в архив
+*FbyApi* | [**calculateTariffs**](docs/Api/FbyApi.md#calculatetariffs) | **POST** /tariffs/calculate | Калькулятор стоимости услуг
+*FbyApi* | [**confirmBusinessPrices**](docs/Api/FbyApi.md#confirmbusinessprices) | **POST** /businesses/{businessId}/price-quarantine/confirm | Подтверждение цены на товар, попавшего в карантин (основная цена)
+*FbyApi* | [**confirmCampaignPrices**](docs/Api/FbyApi.md#confirmcampaignprices) | **POST** /campaigns/{campaignId}/price-quarantine/confirm | Подтверждение цены на товар, попавшего в карантин (цена в магазине)
+*FbyApi* | [**createChat**](docs/Api/FbyApi.md#createchat) | **POST** /businesses/{businessId}/chats/new | Создание нового чата с покупателем
 *FbyApi* | [**deleteCampaignOffers**](docs/Api/FbyApi.md#deletecampaignoffers) | **POST** /campaigns/{campaignId}/offers/delete | Удаление товаров из ассортимента магазина
 *FbyApi* | [**deleteHiddenOffers**](docs/Api/FbyApi.md#deletehiddenoffers) | **DELETE** /campaigns/{campaignId}/hidden-offers | Возобновление показа товаров
 *FbyApi* | [**deleteOffers**](docs/Api/FbyApi.md#deleteoffers) | **POST** /businesses/{businessId}/offer-mappings/delete | Удаление товаров из каталога
+*FbyApi* | [**deleteOffersFromArchive**](docs/Api/FbyApi.md#deleteoffersfromarchive) | **POST** /businesses/{businessId}/offer-mappings/unarchive | Восстановление товаров из архива
+*FbyApi* | [**generateBoostConsolidatedReport**](docs/Api/FbyApi.md#generateboostconsolidatedreport) | **POST** /reports/boost-consolidated/generate | Отчет по бусту продаж
+*FbyApi* | [**generateCompetitorsPositionReport**](docs/Api/FbyApi.md#generatecompetitorspositionreport) | **POST** /reports/competitors-position/generate | Отчет «Конкурентная позиция»
 *FbyApi* | [**generateGoodsMovementReport**](docs/Api/FbyApi.md#generategoodsmovementreport) | **POST** /reports/goods-movement/generate | Отчет по движению товаров
 *FbyApi* | [**generateGoodsRealizationReport**](docs/Api/FbyApi.md#generategoodsrealizationreport) | **POST** /reports/goods-realization/generate | Отчет по реализации
+*FbyApi* | [**generateGoodsTurnoverReport**](docs/Api/FbyApi.md#generategoodsturnoverreport) | **POST** /reports/goods-turnover/generate | Отчет по оборачиваемости
 *FbyApi* | [**generatePricesReport**](docs/Api/FbyApi.md#generatepricesreport) | **POST** /reports/prices/generate | Отчет «Цены на рынке»
+*FbyApi* | [**generateShelfsStatisticsReport**](docs/Api/FbyApi.md#generateshelfsstatisticsreport) | **POST** /reports/shelf-statistics/generate | Отчет по полкам
 *FbyApi* | [**generateShowsSalesReport**](docs/Api/FbyApi.md#generateshowssalesreport) | **POST** /reports/shows-sales/generate | Отчет «Аналитика продаж»
 *FbyApi* | [**generateStocksOnWarehousesReport**](docs/Api/FbyApi.md#generatestocksonwarehousesreport) | **POST** /reports/stocks-on-warehouses/generate | Отчет по остаткам на складах
 *FbyApi* | [**generateUnitedMarketplaceServicesReport**](docs/Api/FbyApi.md#generateunitedmarketplaceservicesreport) | **POST** /reports/united-marketplace-services/generate | Отчет по стоимости услуг
 *FbyApi* | [**generateUnitedNettingReport**](docs/Api/FbyApi.md#generateunitednettingreport) | **POST** /reports/united-netting/generate | Отчет по платежам
-*FbyApi* | [**getActualStocks**](docs/Api/FbyApi.md#getactualstocks) | **GET** /campaigns/{campaignId}/warehouses/{warehouseId}/stocks/actual | Запрос информации об остатках
+*FbyApi* | [**generateUnitedOrdersReport**](docs/Api/FbyApi.md#generateunitedordersreport) | **POST** /reports/united-orders/generate | Отчет по заказам
 *FbyApi* | [**getBidsInfoForBusiness**](docs/Api/FbyApi.md#getbidsinfoforbusiness) | **POST** /businesses/{businessId}/bids/info | Информация об установленных ставках
 *FbyApi* | [**getBidsRecommendations**](docs/Api/FbyApi.md#getbidsrecommendations) | **POST** /businesses/{businessId}/bids/recommendations | Рекомендованные ставки для заданных товаров
 *FbyApi* | [**getBusinessQuarantineOffers**](docs/Api/FbyApi.md#getbusinessquarantineoffers) | **POST** /businesses/{businessId}/price-quarantine | Список товаров, находящихся в карантине (основная цена)
+*FbyApi* | [**getBusinessSettings**](docs/Api/FbyApi.md#getbusinesssettings) | **POST** /businesses/{businessId}/settings | Настройки кабинета
 *FbyApi* | [**getCampaign**](docs/Api/FbyApi.md#getcampaign) | **GET** /campaigns/{campaignId} | Информация о магазине
 *FbyApi* | [**getCampaignLogins**](docs/Api/FbyApi.md#getcampaignlogins) | **GET** /campaigns/{campaignId}/logins | Логины, связанные с магазином
 *FbyApi* | [**getCampaignOffers**](docs/Api/FbyApi.md#getcampaignoffers) | **POST** /campaigns/{campaignId}/offers | Список товаров, размещенных в заданном магазине, с параметрами размещения
 *FbyApi* | [**getCampaignQuarantineOffers**](docs/Api/FbyApi.md#getcampaignquarantineoffers) | **POST** /campaigns/{campaignId}/price-quarantine | Список товаров, находящихся в карантине (цена в магазине)
 *FbyApi* | [**getCampaigns**](docs/Api/FbyApi.md#getcampaigns) | **GET** /campaigns | Магазины пользователя
 *FbyApi* | [**getCampaignsByLogin**](docs/Api/FbyApi.md#getcampaignsbylogin) | **GET** /campaigns/by_login/{login} | Магазины, доступные логину
+*FbyApi* | [**getCategoriesTree**](docs/Api/FbyApi.md#getcategoriestree) | **POST** /categories/tree | Дерево категорий
 *FbyApi* | [**getCategoryContentParameters**](docs/Api/FbyApi.md#getcategorycontentparameters) | **POST** /category/{categoryId}/parameters | Списки характеристик товаров по категориям
+*FbyApi* | [**getChatHistory**](docs/Api/FbyApi.md#getchathistory) | **POST** /businesses/{businessId}/chats/history | Получение истории сообщений в чате
+*FbyApi* | [**getChats**](docs/Api/FbyApi.md#getchats) | **POST** /businesses/{businessId}/chats | Получение доступных чатов
 *FbyApi* | [**getFulfillmentWarehouses**](docs/Api/FbyApi.md#getfulfillmentwarehouses) | **GET** /warehouses | Идентификаторы складов Маркета (FBY)
 *FbyApi* | [**getGoodsStats**](docs/Api/FbyApi.md#getgoodsstats) | **POST** /campaigns/{campaignId}/stats/skus | Отчет по товарам
 *FbyApi* | [**getHiddenOffers**](docs/Api/FbyApi.md#gethiddenoffers) | **GET** /campaigns/{campaignId}/hidden-offers | Информация о скрытых вами товарах
@@ -364,9 +437,11 @@ Class | Method | HTTP request | Description
 *FbyApi* | [**getOfferMappings**](docs/Api/FbyApi.md#getoffermappings) | **POST** /businesses/{businessId}/offer-mappings | Информация о товарах в каталоге
 *FbyApi* | [**getOfferRecommendations**](docs/Api/FbyApi.md#getofferrecommendations) | **POST** /businesses/{businessId}/offers/recommendations | Рекомендации Маркета, касающиеся цен
 *FbyApi* | [**getOrder**](docs/Api/FbyApi.md#getorder) | **GET** /campaigns/{campaignId}/orders/{orderId} | Информация о заказе
-*FbyApi* | [**getOrdersStats**](docs/Api/FbyApi.md#getordersstats) | **POST** /campaigns/{campaignId}/stats/orders | Отчет по заказам
+*FbyApi* | [**getOrderBusinessBuyerInfo**](docs/Api/FbyApi.md#getorderbusinessbuyerinfo) | **POST** /campaigns/{campaignId}/orders/{orderId}/business-buyer | Информация о покупателе — юридическом лице
+*FbyApi* | [**getOrderBusinessDocumentsInfo**](docs/Api/FbyApi.md#getorderbusinessdocumentsinfo) | **POST** /campaigns/{campaignId}/orders/{orderId}/documents | Информация о документах
+*FbyApi* | [**getOrdersStats**](docs/Api/FbyApi.md#getordersstats) | **POST** /campaigns/{campaignId}/stats/orders | Детальная информация по заказам
 *FbyApi* | [**getPrices**](docs/Api/FbyApi.md#getprices) | **GET** /campaigns/{campaignId}/offer-prices | Список цен
-*FbyApi* | [**getPricesByOfferIds**](docs/Api/FbyApi.md#getpricesbyofferids) | **POST** /campaigns/{campaignId}/offer-prices | Просмотр установленных в магазине цен
+*FbyApi* | [**getPricesByOfferIds**](docs/Api/FbyApi.md#getpricesbyofferids) | **POST** /campaigns/{campaignId}/offer-prices | Просмотр цен на указанные товары в магазине
 *FbyApi* | [**getReportInfo**](docs/Api/FbyApi.md#getreportinfo) | **GET** /reports/info/{reportId} | Статус генерации и скачивание готовых отчетов
 *FbyApi* | [**getStocks**](docs/Api/FbyApi.md#getstocks) | **POST** /campaigns/{campaignId}/offers/stocks | Информация об остатках и оборачиваемости
 *FbyApi* | [**getSuggestedOfferMappingEntries**](docs/Api/FbyApi.md#getsuggestedoffermappingentries) | **POST** /campaigns/{campaignId}/offer-mapping-entries/suggestions | Рекомендованные карточки для ваших товаров
@@ -376,6 +451,8 @@ Class | Method | HTTP request | Description
 *FbyApi* | [**searchRegionChildren**](docs/Api/FbyApi.md#searchregionchildren) | **GET** /regions/{regionId}/children | Информация о дочерних регионах
 *FbyApi* | [**searchRegionsById**](docs/Api/FbyApi.md#searchregionsbyid) | **GET** /regions/{regionId} | Информация о регионе
 *FbyApi* | [**searchRegionsByName**](docs/Api/FbyApi.md#searchregionsbyname) | **GET** /regions | Метод для поиска регионов по их имени
+*FbyApi* | [**sendFileToChat**](docs/Api/FbyApi.md#sendfiletochat) | **POST** /businesses/{businessId}/chats/file/send | Отправка файла в чат
+*FbyApi* | [**sendMessageToChat**](docs/Api/FbyApi.md#sendmessagetochat) | **POST** /businesses/{businessId}/chats/message | Отправка сообщения в чат
 *FbyApi* | [**updateBusinessPrices**](docs/Api/FbyApi.md#updatebusinessprices) | **POST** /businesses/{businessId}/offer-prices/updates | Установка цен
 *FbyApi* | [**updateCampaignOffers**](docs/Api/FbyApi.md#updatecampaignoffers) | **POST** /campaigns/{campaignId}/offers/update | Настройка размещения товаров в магазине
 *FbyApi* | [**updateOfferContent**](docs/Api/FbyApi.md#updateoffercontent) | **POST** /businesses/{businessId}/offer-cards/update | Редактирование категорийных характеристик товара
@@ -409,25 +486,27 @@ Class | Method | HTTP request | Description
 *OffersApi* | [**getOfferRecommendations**](docs/Api/OffersApi.md#getofferrecommendations) | **POST** /businesses/{businessId}/offers/recommendations | Рекомендации Маркета, касающиеся цен
 *OffersApi* | [**getOffers**](docs/Api/OffersApi.md#getoffers) | **GET** /campaigns/{campaignId}/offers | Предложения магазина
 *OffersApi* | [**updateCampaignOffers**](docs/Api/OffersApi.md#updatecampaignoffers) | **POST** /campaigns/{campaignId}/offers/update | Настройка размещения товаров в магазине
-*OrderDeliveryApi* | [**getOrderBuyerInfo**](docs/Api/OrderDeliveryApi.md#getorderbuyerinfo) | **GET** /campaigns/{campaignId}/orders/{orderId}/buyer | Информация о покупателе
+*OrderBusinessInformationApi* | [**getOrderBusinessBuyerInfo**](docs/Api/OrderBusinessInformationApi.md#getorderbusinessbuyerinfo) | **POST** /campaigns/{campaignId}/orders/{orderId}/business-buyer | Информация о покупателе — юридическом лице
+*OrderBusinessInformationApi* | [**getOrderBusinessDocumentsInfo**](docs/Api/OrderBusinessInformationApi.md#getorderbusinessdocumentsinfo) | **POST** /campaigns/{campaignId}/orders/{orderId}/documents | Информация о документах
+*OrderDeliveryApi* | [**getOrderBuyerInfo**](docs/Api/OrderDeliveryApi.md#getorderbuyerinfo) | **GET** /campaigns/{campaignId}/orders/{orderId}/buyer | Информация о покупателе — физическом лице (DBS)
 *OrderDeliveryApi* | [**setOrderDeliveryDate**](docs/Api/OrderDeliveryApi.md#setorderdeliverydate) | **PUT** /campaigns/{campaignId}/orders/{orderId}/delivery/date | Изменение даты доставки заказа
-*OrderDeliveryApi* | [**setOrderDeliveryTrackCode**](docs/Api/OrderDeliveryApi.md#setorderdeliverytrackcode) | **POST** /campaigns/{campaignId}/orders/{orderId}/delivery/track | Передача трек‑номера посылки
+*OrderDeliveryApi* | [**setOrderDeliveryTrackCode**](docs/Api/OrderDeliveryApi.md#setorderdeliverytrackcode) | **POST** /campaigns/{campaignId}/orders/{orderId}/delivery/track | Передача трек‑номера посылки (DBS)
 *OrderDeliveryApi* | [**updateOrderStorageLimit**](docs/Api/OrderDeliveryApi.md#updateorderstoragelimit) | **PUT** /campaigns/{campaignId}/orders/{orderId}/delivery/storage-limit | Продление срока хранения заказа
 *OrderDeliveryApi* | [**verifyOrderEac**](docs/Api/OrderDeliveryApi.md#verifyordereac) | **PUT** /campaigns/{campaignId}/orders/{orderId}/verifyEac | Передача кода проверки
-*OrderLabelsApi* | [**generateOrderLabel**](docs/Api/OrderLabelsApi.md#generateorderlabel) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/shipments/{shipmentId}/boxes/{boxId}/label | Ярлык‑наклейка на отдельное грузовое место в заказе
-*OrderLabelsApi* | [**generateOrderLabels**](docs/Api/OrderLabelsApi.md#generateorderlabels) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/labels | Ярлыки‑наклейки на все грузовые места в заказе
+*OrderLabelsApi* | [**generateOrderLabel**](docs/Api/OrderLabelsApi.md#generateorderlabel) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/shipments/{shipmentId}/boxes/{boxId}/label | Ярлык‑наклейка для коробки в заказе
+*OrderLabelsApi* | [**generateOrderLabels**](docs/Api/OrderLabelsApi.md#generateorderlabels) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/labels | Ярлыки‑наклейки на все коробки в одном заказе
 *OrderLabelsApi* | [**getOrderLabelsData**](docs/Api/OrderLabelsApi.md#getorderlabelsdata) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/labels/data | Информация на ярлыках‑наклейках
-*OrdersApi* | [**acceptOrderCancellation**](docs/Api/OrdersApi.md#acceptordercancellation) | **PUT** /campaigns/{campaignId}/orders/{orderId}/cancellation/accept | Отмена заказа покупателем
-*OrdersApi* | [**createFaasOrder**](docs/Api/OrdersApi.md#createfaasorder) | **POST** /campaigns/{campaignId}/orders | Создание заказа
+*OrdersApi* | [**acceptOrderCancellation**](docs/Api/OrdersApi.md#acceptordercancellation) | **PUT** /campaigns/{campaignId}/orders/{orderId}/cancellation/accept | Отмена заказа покупателем (DBS)
 *OrdersApi* | [**getOrder**](docs/Api/OrdersApi.md#getorder) | **GET** /campaigns/{campaignId}/orders/{orderId} | Информация о заказе
 *OrdersApi* | [**getOrders**](docs/Api/OrdersApi.md#getorders) | **GET** /campaigns/{campaignId}/orders | Информация о заказах
 *OrdersApi* | [**provideOrderDigitalCodes**](docs/Api/OrdersApi.md#provideorderdigitalcodes) | **POST** /campaigns/{campaignId}/orders/{orderId}/deliverDigitalGoods | Передача ключей цифровых товаров
-*OrdersApi* | [**provideOrderItemIdentifiers**](docs/Api/OrdersApi.md#provideorderitemidentifiers) | **PUT** /campaigns/{campaignId}/orders/{orderId}/identifiers | Передача уникальных кодов маркировки единиц товара
-*OrdersApi* | [**setOrderShipmentBoxes**](docs/Api/OrdersApi.md#setordershipmentboxes) | **PUT** /campaigns/{campaignId}/orders/{orderId}/delivery/shipments/{shipmentId}/boxes | Передача количества грузовых мест в заказе
-*OrdersApi* | [**updateOrderItems**](docs/Api/OrdersApi.md#updateorderitems) | **PUT** /campaigns/{campaignId}/orders/{orderId}/items | Удаление товара из заказа или уменьшение числа единиц
+*OrdersApi* | [**provideOrderItemIdentifiers**](docs/Api/OrdersApi.md#provideorderitemidentifiers) | **PUT** /campaigns/{campaignId}/orders/{orderId}/identifiers | Передача уникальных кодов маркировки единиц товара (DBS)
+*OrdersApi* | [**setOrderBoxLayout**](docs/Api/OrdersApi.md#setorderboxlayout) | **PUT** /campaigns/{campaignId}/orders/{orderId}/boxes | Подготовка заказа (FBS)
+*OrdersApi* | [**setOrderShipmentBoxes**](docs/Api/OrdersApi.md#setordershipmentboxes) | **PUT** /campaigns/{campaignId}/orders/{orderId}/delivery/shipments/{shipmentId}/boxes | Передача количества грузовых мест в заказе (DBS)
+*OrdersApi* | [**updateOrderItems**](docs/Api/OrdersApi.md#updateorderitems) | **PUT** /campaigns/{campaignId}/orders/{orderId}/items | Удаление товара из заказа или уменьшение числа единиц (DBS)
 *OrdersApi* | [**updateOrderStatus**](docs/Api/OrdersApi.md#updateorderstatus) | **PUT** /campaigns/{campaignId}/orders/{orderId}/status | Изменение статуса заказа
 *OrdersApi* | [**updateOrderStatuses**](docs/Api/OrdersApi.md#updateorderstatuses) | **POST** /campaigns/{campaignId}/orders/status-update | Изменение статусов заказа
-*OrdersStatsApi* | [**getOrdersStats**](docs/Api/OrdersStatsApi.md#getordersstats) | **POST** /campaigns/{campaignId}/stats/orders | Отчет по заказам
+*OrdersStatsApi* | [**getOrdersStats**](docs/Api/OrdersStatsApi.md#getordersstats) | **POST** /campaigns/{campaignId}/stats/orders | Детальная информация по заказам
 *OutletLicensesApi* | [**deleteOutletLicenses**](docs/Api/OutletLicensesApi.md#deleteoutletlicenses) | **DELETE** /campaigns/{campaignId}/outlets/licenses | Удаление лицензий для точек продаж
 *OutletLicensesApi* | [**getOutletLicenses**](docs/Api/OutletLicensesApi.md#getoutletlicenses) | **GET** /campaigns/{campaignId}/outlets/licenses | Информация о лицензиях для точек продаж
 *OutletLicensesApi* | [**updateOutletLicenses**](docs/Api/OutletLicensesApi.md#updateoutletlicenses) | **POST** /campaigns/{campaignId}/outlets/licenses | Создание и изменение лицензий для точек продаж
@@ -436,25 +515,32 @@ Class | Method | HTTP request | Description
 *OutletsApi* | [**getOutlet**](docs/Api/OutletsApi.md#getoutlet) | **GET** /campaigns/{campaignId}/outlets/{outletId} | Информация о точке продаж
 *OutletsApi* | [**getOutlets**](docs/Api/OutletsApi.md#getoutlets) | **GET** /campaigns/{campaignId}/outlets | Информация о точках продаж
 *OutletsApi* | [**updateOutlet**](docs/Api/OutletsApi.md#updateoutlet) | **PUT** /campaigns/{campaignId}/outlets/{outletId} | Изменение информации о точке продаж
-*PriceQuarantineApi* | [**confirmBusinessPrices**](docs/Api/PriceQuarantineApi.md#confirmbusinessprices) | **POST** /businesses/{businessId}/price-quarantine/confirm | Подтверждение цены товара, попавшего в карантин (основная цена)
-*PriceQuarantineApi* | [**confirmCampaignPrices**](docs/Api/PriceQuarantineApi.md#confirmcampaignprices) | **POST** /campaigns/{campaignId}/price-quarantine/confirm | Подтверждение цены товара, попавшего в карантин (цена в магазине)
+*PriceQuarantineApi* | [**confirmBusinessPrices**](docs/Api/PriceQuarantineApi.md#confirmbusinessprices) | **POST** /businesses/{businessId}/price-quarantine/confirm | Подтверждение цены на товар, попавшего в карантин (основная цена)
+*PriceQuarantineApi* | [**confirmCampaignPrices**](docs/Api/PriceQuarantineApi.md#confirmcampaignprices) | **POST** /campaigns/{campaignId}/price-quarantine/confirm | Подтверждение цены на товар, попавшего в карантин (цена в магазине)
 *PriceQuarantineApi* | [**getBusinessQuarantineOffers**](docs/Api/PriceQuarantineApi.md#getbusinessquarantineoffers) | **POST** /businesses/{businessId}/price-quarantine | Список товаров, находящихся в карантине (основная цена)
 *PriceQuarantineApi* | [**getCampaignQuarantineOffers**](docs/Api/PriceQuarantineApi.md#getcampaignquarantineoffers) | **POST** /campaigns/{campaignId}/price-quarantine | Список товаров, находящихся в карантине (цена в магазине)
 *PricesApi* | [**getPrices**](docs/Api/PricesApi.md#getprices) | **GET** /campaigns/{campaignId}/offer-prices | Список цен
-*PricesApi* | [**getPricesByOfferIds**](docs/Api/PricesApi.md#getpricesbyofferids) | **POST** /campaigns/{campaignId}/offer-prices | Просмотр установленных в магазине цен
+*PricesApi* | [**getPricesByOfferIds**](docs/Api/PricesApi.md#getpricesbyofferids) | **POST** /campaigns/{campaignId}/offer-prices | Просмотр цен на указанные товары в магазине
 *PricesApi* | [**getSuggestedPrices**](docs/Api/PricesApi.md#getsuggestedprices) | **POST** /campaigns/{campaignId}/offer-prices/suggestions | Цены для продвижения товаров
 *PricesApi* | [**updateBusinessPrices**](docs/Api/PricesApi.md#updatebusinessprices) | **POST** /businesses/{businessId}/offer-prices/updates | Установка цен
 *PricesApi* | [**updatePrices**](docs/Api/PricesApi.md#updateprices) | **POST** /campaigns/{campaignId}/offer-prices/updates | Установка цен на товары в конкретном магазине
 *RegionsApi* | [**searchRegionChildren**](docs/Api/RegionsApi.md#searchregionchildren) | **GET** /regions/{regionId}/children | Информация о дочерних регионах
 *RegionsApi* | [**searchRegionsById**](docs/Api/RegionsApi.md#searchregionsbyid) | **GET** /regions/{regionId} | Информация о регионе
 *RegionsApi* | [**searchRegionsByName**](docs/Api/RegionsApi.md#searchregionsbyname) | **GET** /regions | Метод для поиска регионов по их имени
+*ReportsApi* | [**generateBoostConsolidatedReport**](docs/Api/ReportsApi.md#generateboostconsolidatedreport) | **POST** /reports/boost-consolidated/generate | Отчет по бусту продаж
+*ReportsApi* | [**generateCompetitorsPositionReport**](docs/Api/ReportsApi.md#generatecompetitorspositionreport) | **POST** /reports/competitors-position/generate | Отчет «Конкурентная позиция»
 *ReportsApi* | [**generateGoodsMovementReport**](docs/Api/ReportsApi.md#generategoodsmovementreport) | **POST** /reports/goods-movement/generate | Отчет по движению товаров
 *ReportsApi* | [**generateGoodsRealizationReport**](docs/Api/ReportsApi.md#generategoodsrealizationreport) | **POST** /reports/goods-realization/generate | Отчет по реализации
+*ReportsApi* | [**generateGoodsTurnoverReport**](docs/Api/ReportsApi.md#generategoodsturnoverreport) | **POST** /reports/goods-turnover/generate | Отчет по оборачиваемости
+*ReportsApi* | [**generateMassOrderLabelsReport**](docs/Api/ReportsApi.md#generatemassorderlabelsreport) | **POST** /reports/documents/labels/generate | Ярлыки‑наклейки на все коробки в нескольких заказах
 *ReportsApi* | [**generatePricesReport**](docs/Api/ReportsApi.md#generatepricesreport) | **POST** /reports/prices/generate | Отчет «Цены на рынке»
+*ReportsApi* | [**generateShelfsStatisticsReport**](docs/Api/ReportsApi.md#generateshelfsstatisticsreport) | **POST** /reports/shelf-statistics/generate | Отчет по полкам
+*ReportsApi* | [**generateShipmentListDocumentReport**](docs/Api/ReportsApi.md#generateshipmentlistdocumentreport) | **POST** /reports/documents/shipment-list/generate | Лист сборки
 *ReportsApi* | [**generateShowsSalesReport**](docs/Api/ReportsApi.md#generateshowssalesreport) | **POST** /reports/shows-sales/generate | Отчет «Аналитика продаж»
 *ReportsApi* | [**generateStocksOnWarehousesReport**](docs/Api/ReportsApi.md#generatestocksonwarehousesreport) | **POST** /reports/stocks-on-warehouses/generate | Отчет по остаткам на складах
 *ReportsApi* | [**generateUnitedMarketplaceServicesReport**](docs/Api/ReportsApi.md#generateunitedmarketplaceservicesreport) | **POST** /reports/united-marketplace-services/generate | Отчет по стоимости услуг
 *ReportsApi* | [**generateUnitedNettingReport**](docs/Api/ReportsApi.md#generateunitednettingreport) | **POST** /reports/united-netting/generate | Отчет по платежам
+*ReportsApi* | [**generateUnitedOrdersReport**](docs/Api/ReportsApi.md#generateunitedordersreport) | **POST** /reports/united-orders/generate | Отчет по заказам
 *ReportsApi* | [**getReportInfo**](docs/Api/ReportsApi.md#getreportinfo) | **GET** /reports/info/{reportId} | Статус генерации и скачивание готовых отчетов
 *ReturnsApi* | [**getReturn**](docs/Api/ReturnsApi.md#getreturn) | **GET** /campaigns/{campaignId}/orders/{orderId}/returns/{returnId} | Информация о возврате или невыкупе
 *ReturnsApi* | [**getReturnApplication**](docs/Api/ReturnsApi.md#getreturnapplication) | **GET** /campaigns/{campaignId}/orders/{orderId}/returns/{returnId}/application | Получение заявления на возврат
@@ -474,9 +560,9 @@ Class | Method | HTTP request | Description
 *ShipmentsApi* | [**searchShipments**](docs/Api/ShipmentsApi.md#searchshipments) | **PUT** /campaigns/{campaignId}/first-mile/shipments | Получение информации об отгрузках
 *ShipmentsApi* | [**setShipmentPalletsCount**](docs/Api/ShipmentsApi.md#setshipmentpalletscount) | **PUT** /campaigns/{campaignId}/first-mile/shipments/{shipmentId}/pallets | Передача количества упаковок в отгрузке
 *ShipmentsApi* | [**transferOrdersFromShipment**](docs/Api/ShipmentsApi.md#transferordersfromshipment) | **POST** /campaigns/{campaignId}/first-mile/shipments/{shipmentId}/orders/transfer | Перенос заказов в следующую отгрузку
-*StocksApi* | [**getActualStocks**](docs/Api/StocksApi.md#getactualstocks) | **GET** /campaigns/{campaignId}/warehouses/{warehouseId}/stocks/actual | Запрос информации об остатках
 *StocksApi* | [**getStocks**](docs/Api/StocksApi.md#getstocks) | **POST** /campaigns/{campaignId}/offers/stocks | Информация об остатках и оборачиваемости
 *StocksApi* | [**updateStocks**](docs/Api/StocksApi.md#updatestocks) | **PUT** /campaigns/{campaignId}/offers/stocks | Передача информации об остатках
+*TariffsApi* | [**calculateTariffs**](docs/Api/TariffsApi.md#calculatetariffs) | **POST** /tariffs/calculate | Калькулятор стоимости услуг
 *WarehousesApi* | [**getFulfillmentWarehouses**](docs/Api/WarehousesApi.md#getfulfillmentwarehouses) | **GET** /warehouses | Идентификаторы складов Маркета (FBY)
 *WarehousesApi* | [**getWarehouses**](docs/Api/WarehousesApi.md#getwarehouses) | **GET** /businesses/{businessId}/warehouses | Список складов и групп складов
 
@@ -484,6 +570,11 @@ Class | Method | HTTP request | Description
 
 - [AcceptOrderCancellationRequest](docs/Model/AcceptOrderCancellationRequest.md)
 - [AddHiddenOffersRequest](docs/Model/AddHiddenOffersRequest.md)
+- [AddOffersToArchiveDTO](docs/Model/AddOffersToArchiveDTO.md)
+- [AddOffersToArchiveErrorDTO](docs/Model/AddOffersToArchiveErrorDTO.md)
+- [AddOffersToArchiveErrorType](docs/Model/AddOffersToArchiveErrorType.md)
+- [AddOffersToArchiveRequest](docs/Model/AddOffersToArchiveRequest.md)
+- [AddOffersToArchiveResponse](docs/Model/AddOffersToArchiveResponse.md)
 - [AgeDTO](docs/Model/AgeDTO.md)
 - [AgeUnitType](docs/Model/AgeUnitType.md)
 - [ApiClientDataErrorResponse](docs/Model/ApiClientDataErrorResponse.md)
@@ -500,10 +591,20 @@ Class | Method | HTTP request | Description
 - [BaseCampaignOfferDTO](docs/Model/BaseCampaignOfferDTO.md)
 - [BaseOfferDTO](docs/Model/BaseOfferDTO.md)
 - [BasePriceDTO](docs/Model/BasePriceDTO.md)
+- [BaseShipmentDTO](docs/Model/BaseShipmentDTO.md)
 - [BidRecommendationItemDTO](docs/Model/BidRecommendationItemDTO.md)
 - [BriefOrderItemDTO](docs/Model/BriefOrderItemDTO.md)
 - [BriefOrderItemInstanceDTO](docs/Model/BriefOrderItemInstanceDTO.md)
 - [BusinessDTO](docs/Model/BusinessDTO.md)
+- [BusinessSettingsDTO](docs/Model/BusinessSettingsDTO.md)
+- [CalculateTariffsOfferDTO](docs/Model/CalculateTariffsOfferDTO.md)
+- [CalculateTariffsOfferInfoDTO](docs/Model/CalculateTariffsOfferInfoDTO.md)
+- [CalculateTariffsParametersDTO](docs/Model/CalculateTariffsParametersDTO.md)
+- [CalculateTariffsRequest](docs/Model/CalculateTariffsRequest.md)
+- [CalculateTariffsResponse](docs/Model/CalculateTariffsResponse.md)
+- [CalculateTariffsResponseDTO](docs/Model/CalculateTariffsResponseDTO.md)
+- [CalculatedTariffDTO](docs/Model/CalculatedTariffDTO.md)
+- [CalculatedTariffType](docs/Model/CalculatedTariffType.md)
 - [CampaignDTO](docs/Model/CampaignDTO.md)
 - [CampaignSettingsDTO](docs/Model/CampaignSettingsDTO.md)
 - [CampaignSettingsDeliveryDTO](docs/Model/CampaignSettingsDeliveryDTO.md)
@@ -512,12 +613,21 @@ Class | Method | HTTP request | Description
 - [CampaignSettingsScheduleSourceType](docs/Model/CampaignSettingsScheduleSourceType.md)
 - [CampaignSettingsTimePeriodDTO](docs/Model/CampaignSettingsTimePeriodDTO.md)
 - [CategoryContentParametersDTO](docs/Model/CategoryContentParametersDTO.md)
+- [CategoryDTO](docs/Model/CategoryDTO.md)
 - [CategoryParameterDTO](docs/Model/CategoryParameterDTO.md)
+- [CategoryParameterUnitDTO](docs/Model/CategoryParameterUnitDTO.md)
 - [ChangeOutletRequest](docs/Model/ChangeOutletRequest.md)
+- [ChatMessageDTO](docs/Model/ChatMessageDTO.md)
+- [ChatMessagePayloadDTO](docs/Model/ChatMessagePayloadDTO.md)
+- [ChatMessageSenderType](docs/Model/ChatMessageSenderType.md)
+- [ChatMessagesResultDTO](docs/Model/ChatMessagesResultDTO.md)
+- [ChatStatusType](docs/Model/ChatStatusType.md)
+- [ChatType](docs/Model/ChatType.md)
 - [ConfirmPricesRequest](docs/Model/ConfirmPricesRequest.md)
 - [ConfirmShipmentRequest](docs/Model/ConfirmShipmentRequest.md)
-- [CreateOrderRequest](docs/Model/CreateOrderRequest.md)
-- [CreateOrderResponse](docs/Model/CreateOrderResponse.md)
+- [CreateChatRequest](docs/Model/CreateChatRequest.md)
+- [CreateChatResponse](docs/Model/CreateChatResponse.md)
+- [CreateChatResultDTO](docs/Model/CreateChatResultDTO.md)
 - [CreateOutletResponse](docs/Model/CreateOutletResponse.md)
 - [CurrencyType](docs/Model/CurrencyType.md)
 - [DayOfWeekType](docs/Model/DayOfWeekType.md)
@@ -526,16 +636,21 @@ Class | Method | HTTP request | Description
 - [DeleteCampaignOffersResponse](docs/Model/DeleteCampaignOffersResponse.md)
 - [DeleteHiddenOffersRequest](docs/Model/DeleteHiddenOffersRequest.md)
 - [DeleteOffersDTO](docs/Model/DeleteOffersDTO.md)
+- [DeleteOffersFromArchiveDTO](docs/Model/DeleteOffersFromArchiveDTO.md)
+- [DeleteOffersFromArchiveRequest](docs/Model/DeleteOffersFromArchiveRequest.md)
+- [DeleteOffersFromArchiveResponse](docs/Model/DeleteOffersFromArchiveResponse.md)
 - [DeleteOffersRequest](docs/Model/DeleteOffersRequest.md)
 - [DeleteOffersResponse](docs/Model/DeleteOffersResponse.md)
 - [DeliveryServiceDTO](docs/Model/DeliveryServiceDTO.md)
 - [DeliveryServiceInfoDTO](docs/Model/DeliveryServiceInfoDTO.md)
 - [DeliveryServicesDTO](docs/Model/DeliveryServicesDTO.md)
+- [DocumentDTO](docs/Model/DocumentDTO.md)
 - [EacVerificationResultDTO](docs/Model/EacVerificationResultDTO.md)
 - [EacVerificationStatusType](docs/Model/EacVerificationStatusType.md)
 - [EmptyApiResponse](docs/Model/EmptyApiResponse.md)
 - [EnrichedMappingsOfferDTO](docs/Model/EnrichedMappingsOfferDTO.md)
 - [EnrichedModelDTO](docs/Model/EnrichedModelDTO.md)
+- [EnrichedOrderBoxLayoutDTO](docs/Model/EnrichedOrderBoxLayoutDTO.md)
 - [FeedCategoryDTO](docs/Model/FeedCategoryDTO.md)
 - [FeedContentDTO](docs/Model/FeedContentDTO.md)
 - [FeedContentErrorDTO](docs/Model/FeedContentErrorDTO.md)
@@ -577,17 +692,22 @@ Class | Method | HTTP request | Description
 - [FulfillmentWarehousesDTO](docs/Model/FulfillmentWarehousesDTO.md)
 - [FullOutletDTO](docs/Model/FullOutletDTO.md)
 - [FullOutletLicenseDTO](docs/Model/FullOutletLicenseDTO.md)
+- [GenerateBoostConsolidatedRequest](docs/Model/GenerateBoostConsolidatedRequest.md)
+- [GenerateCompetitorsPositionReportRequest](docs/Model/GenerateCompetitorsPositionReportRequest.md)
 - [GenerateGoodsMovementReportRequest](docs/Model/GenerateGoodsMovementReportRequest.md)
 - [GenerateGoodsRealizationReportRequest](docs/Model/GenerateGoodsRealizationReportRequest.md)
+- [GenerateGoodsTurnoverRequest](docs/Model/GenerateGoodsTurnoverRequest.md)
+- [GenerateMassOrderLabelsRequest](docs/Model/GenerateMassOrderLabelsRequest.md)
 - [GeneratePricesReportRequest](docs/Model/GeneratePricesReportRequest.md)
 - [GenerateReportDTO](docs/Model/GenerateReportDTO.md)
 - [GenerateReportResponse](docs/Model/GenerateReportResponse.md)
+- [GenerateShelfsStatisticsRequest](docs/Model/GenerateShelfsStatisticsRequest.md)
+- [GenerateShipmentListDocumentReportRequest](docs/Model/GenerateShipmentListDocumentReportRequest.md)
 - [GenerateShowsSalesReportRequest](docs/Model/GenerateShowsSalesReportRequest.md)
 - [GenerateStocksOnWarehousesReportRequest](docs/Model/GenerateStocksOnWarehousesReportRequest.md)
 - [GenerateUnitedMarketplaceServicesReportRequest](docs/Model/GenerateUnitedMarketplaceServicesReportRequest.md)
 - [GenerateUnitedNettingReportRequest](docs/Model/GenerateUnitedNettingReportRequest.md)
-- [GetActualStocksDTO](docs/Model/GetActualStocksDTO.md)
-- [GetActualStocksResponse](docs/Model/GetActualStocksResponse.md)
+- [GenerateUnitedOrdersRequest](docs/Model/GenerateUnitedOrdersRequest.md)
 - [GetAllOffersResponse](docs/Model/GetAllOffersResponse.md)
 - [GetBidsInfoRequest](docs/Model/GetBidsInfoRequest.md)
 - [GetBidsInfoResponse](docs/Model/GetBidsInfoResponse.md)
@@ -595,6 +715,10 @@ Class | Method | HTTP request | Description
 - [GetBidsRecommendationsRequest](docs/Model/GetBidsRecommendationsRequest.md)
 - [GetBidsRecommendationsResponse](docs/Model/GetBidsRecommendationsResponse.md)
 - [GetBidsRecommendationsResponseDTO](docs/Model/GetBidsRecommendationsResponseDTO.md)
+- [GetBusinessBuyerInfoResponse](docs/Model/GetBusinessBuyerInfoResponse.md)
+- [GetBusinessDocumentsInfoResponse](docs/Model/GetBusinessDocumentsInfoResponse.md)
+- [GetBusinessSettingsInfoDTO](docs/Model/GetBusinessSettingsInfoDTO.md)
+- [GetBusinessSettingsResponse](docs/Model/GetBusinessSettingsResponse.md)
 - [GetCampaignCategoriesResponse](docs/Model/GetCampaignCategoriesResponse.md)
 - [GetCampaignLoginsResponse](docs/Model/GetCampaignLoginsResponse.md)
 - [GetCampaignOfferDTO](docs/Model/GetCampaignOfferDTO.md)
@@ -605,7 +729,15 @@ Class | Method | HTTP request | Description
 - [GetCampaignResponse](docs/Model/GetCampaignResponse.md)
 - [GetCampaignSettingsResponse](docs/Model/GetCampaignSettingsResponse.md)
 - [GetCampaignsResponse](docs/Model/GetCampaignsResponse.md)
+- [GetCategoriesRequest](docs/Model/GetCategoriesRequest.md)
+- [GetCategoriesResponse](docs/Model/GetCategoriesResponse.md)
 - [GetCategoryContentParametersResponse](docs/Model/GetCategoryContentParametersResponse.md)
+- [GetChatHistoryRequest](docs/Model/GetChatHistoryRequest.md)
+- [GetChatHistoryResponse](docs/Model/GetChatHistoryResponse.md)
+- [GetChatInfoDTO](docs/Model/GetChatInfoDTO.md)
+- [GetChatsInfoDTO](docs/Model/GetChatsInfoDTO.md)
+- [GetChatsRequest](docs/Model/GetChatsRequest.md)
+- [GetChatsResponse](docs/Model/GetChatsResponse.md)
 - [GetDeliveryServicesResponse](docs/Model/GetDeliveryServicesResponse.md)
 - [GetFeedCategoriesResponse](docs/Model/GetFeedCategoriesResponse.md)
 - [GetFeedIndexLogsResponse](docs/Model/GetFeedIndexLogsResponse.md)
@@ -668,17 +800,17 @@ Class | Method | HTTP request | Description
 - [GetWarehousesResponse](docs/Model/GetWarehousesResponse.md)
 - [GoodsStatsDTO](docs/Model/GoodsStatsDTO.md)
 - [GoodsStatsGoodsDTO](docs/Model/GoodsStatsGoodsDTO.md)
-- [GoodsStatsTariffDTO](docs/Model/GoodsStatsTariffDTO.md)
-- [GoodsStatsTariffType](docs/Model/GoodsStatsTariffType.md)
 - [GoodsStatsWarehouseDTO](docs/Model/GoodsStatsWarehouseDTO.md)
 - [GoodsStatsWeightDimensionsDTO](docs/Model/GoodsStatsWeightDimensionsDTO.md)
 - [GpsDTO](docs/Model/GpsDTO.md)
 - [HiddenOfferDTO](docs/Model/HiddenOfferDTO.md)
+- [LanguageType](docs/Model/LanguageType.md)
 - [LicenseCheckStatusType](docs/Model/LicenseCheckStatusType.md)
 - [LicenseType](docs/Model/LicenseType.md)
 - [LogisticPickupPointDTO](docs/Model/LogisticPickupPointDTO.md)
 - [LogisticPointType](docs/Model/LogisticPointType.md)
 - [MappingsOfferDTO](docs/Model/MappingsOfferDTO.md)
+- [MappingsOfferInfoDTO](docs/Model/MappingsOfferInfoDTO.md)
 - [ModelDTO](docs/Model/ModelDTO.md)
 - [ModelOfferDTO](docs/Model/ModelOfferDTO.md)
 - [ModelPriceDTO](docs/Model/ModelPriceDTO.md)
@@ -699,16 +831,19 @@ Class | Method | HTTP request | Description
 - [OfferDTO](docs/Model/OfferDTO.md)
 - [OfferErrorDTO](docs/Model/OfferErrorDTO.md)
 - [OfferForRecommendationDTO](docs/Model/OfferForRecommendationDTO.md)
+- [OfferManualDTO](docs/Model/OfferManualDTO.md)
 - [OfferMappingDTO](docs/Model/OfferMappingDTO.md)
 - [OfferMappingEntriesDTO](docs/Model/OfferMappingEntriesDTO.md)
 - [OfferMappingEntryDTO](docs/Model/OfferMappingEntryDTO.md)
+- [OfferMappingErrorDTO](docs/Model/OfferMappingErrorDTO.md)
+- [OfferMappingErrorType](docs/Model/OfferMappingErrorType.md)
+- [OfferMappingInfoDTO](docs/Model/OfferMappingInfoDTO.md)
 - [OfferMappingKindType](docs/Model/OfferMappingKindType.md)
 - [OfferMappingSuggestionsListDTO](docs/Model/OfferMappingSuggestionsListDTO.md)
 - [OfferParamDTO](docs/Model/OfferParamDTO.md)
 - [OfferPriceByOfferIdsListResponseDTO](docs/Model/OfferPriceByOfferIdsListResponseDTO.md)
 - [OfferPriceByOfferIdsResponseDTO](docs/Model/OfferPriceByOfferIdsResponseDTO.md)
 - [OfferPriceDTO](docs/Model/OfferPriceDTO.md)
-- [OfferPriceFeedDTO](docs/Model/OfferPriceFeedDTO.md)
 - [OfferPriceListResponseDTO](docs/Model/OfferPriceListResponseDTO.md)
 - [OfferPriceResponseDTO](docs/Model/OfferPriceResponseDTO.md)
 - [OfferProcessingNoteDTO](docs/Model/OfferProcessingNoteDTO.md)
@@ -724,15 +859,18 @@ Class | Method | HTTP request | Description
 - [OfferWeightDimensionsDTO](docs/Model/OfferWeightDimensionsDTO.md)
 - [OffersDTO](docs/Model/OffersDTO.md)
 - [OptionValuesLimitedDTO](docs/Model/OptionValuesLimitedDTO.md)
+- [OrderBoxLayoutDTO](docs/Model/OrderBoxLayoutDTO.md)
+- [OrderBoxLayoutItemDTO](docs/Model/OrderBoxLayoutItemDTO.md)
+- [OrderBoxLayoutPartialCountDTO](docs/Model/OrderBoxLayoutPartialCountDTO.md)
+- [OrderBoxesLayoutDTO](docs/Model/OrderBoxesLayoutDTO.md)
+- [OrderBusinessBuyerDTO](docs/Model/OrderBusinessBuyerDTO.md)
+- [OrderBusinessDocumentsDTO](docs/Model/OrderBusinessDocumentsDTO.md)
+- [OrderBuyerBasicInfoDTO](docs/Model/OrderBuyerBasicInfoDTO.md)
 - [OrderBuyerDTO](docs/Model/OrderBuyerDTO.md)
+- [OrderBuyerInfoDTO](docs/Model/OrderBuyerInfoDTO.md)
 - [OrderBuyerType](docs/Model/OrderBuyerType.md)
 - [OrderCancellationReasonType](docs/Model/OrderCancellationReasonType.md)
 - [OrderCourierDTO](docs/Model/OrderCourierDTO.md)
-- [OrderCreateAddressDTO](docs/Model/OrderCreateAddressDTO.md)
-- [OrderCreateBuyerDTO](docs/Model/OrderCreateBuyerDTO.md)
-- [OrderCreateDTO](docs/Model/OrderCreateDTO.md)
-- [OrderCreateDeliveryDTO](docs/Model/OrderCreateDeliveryDTO.md)
-- [OrderCreateItemDTO](docs/Model/OrderCreateItemDTO.md)
 - [OrderDTO](docs/Model/OrderDTO.md)
 - [OrderDeliveryAddressDTO](docs/Model/OrderDeliveryAddressDTO.md)
 - [OrderDeliveryDTO](docs/Model/OrderDeliveryDTO.md)
@@ -742,9 +880,9 @@ Class | Method | HTTP request | Description
 - [OrderDeliveryDispatchType](docs/Model/OrderDeliveryDispatchType.md)
 - [OrderDeliveryEacType](docs/Model/OrderDeliveryEacType.md)
 - [OrderDeliveryPartnerType](docs/Model/OrderDeliveryPartnerType.md)
-- [OrderDeliverySlotDTO](docs/Model/OrderDeliverySlotDTO.md)
 - [OrderDeliveryType](docs/Model/OrderDeliveryType.md)
 - [OrderDigitalItemDTO](docs/Model/OrderDigitalItemDTO.md)
+- [OrderDocumentStatusType](docs/Model/OrderDocumentStatusType.md)
 - [OrderItemDTO](docs/Model/OrderItemDTO.md)
 - [OrderItemDetailDTO](docs/Model/OrderItemDetailDTO.md)
 - [OrderItemInstanceDTO](docs/Model/OrderItemInstanceDTO.md)
@@ -754,12 +892,12 @@ Class | Method | HTTP request | Description
 - [OrderItemPromoDTO](docs/Model/OrderItemPromoDTO.md)
 - [OrderItemStatusType](docs/Model/OrderItemStatusType.md)
 - [OrderItemSubsidyDTO](docs/Model/OrderItemSubsidyDTO.md)
+- [OrderItemSubsidyType](docs/Model/OrderItemSubsidyType.md)
 - [OrderItemsModificationRequestReasonType](docs/Model/OrderItemsModificationRequestReasonType.md)
 - [OrderItemsModificationResultDTO](docs/Model/OrderItemsModificationResultDTO.md)
 - [OrderLabelDTO](docs/Model/OrderLabelDTO.md)
 - [OrderLiftType](docs/Model/OrderLiftType.md)
 - [OrderParcelBoxDTO](docs/Model/OrderParcelBoxDTO.md)
-- [OrderParcelStatusType](docs/Model/OrderParcelStatusType.md)
 - [OrderPaymentMethodType](docs/Model/OrderPaymentMethodType.md)
 - [OrderPaymentType](docs/Model/OrderPaymentType.md)
 - [OrderPromoType](docs/Model/OrderPromoType.md)
@@ -770,6 +908,7 @@ Class | Method | HTTP request | Description
 - [OrderStatusChangeDeliveryDTO](docs/Model/OrderStatusChangeDeliveryDTO.md)
 - [OrderStatusChangeDeliveryDatesDTO](docs/Model/OrderStatusChangeDeliveryDatesDTO.md)
 - [OrderStatusType](docs/Model/OrderStatusType.md)
+- [OrderSubsidyDTO](docs/Model/OrderSubsidyDTO.md)
 - [OrderSubsidyType](docs/Model/OrderSubsidyType.md)
 - [OrderSubstatusType](docs/Model/OrderSubstatusType.md)
 - [OrderTaxSystemType](docs/Model/OrderTaxSystemType.md)
@@ -816,6 +955,7 @@ Class | Method | HTTP request | Description
 - [ParcelBoxLabelDTO](docs/Model/ParcelBoxLabelDTO.md)
 - [ParcelDTO](docs/Model/ParcelDTO.md)
 - [PartnerShipmentWarehouseDTO](docs/Model/PartnerShipmentWarehouseDTO.md)
+- [PaymentFrequencyType](docs/Model/PaymentFrequencyType.md)
 - [PickupAddressDTO](docs/Model/PickupAddressDTO.md)
 - [PlacementType](docs/Model/PlacementType.md)
 - [PriceCompetitivenessThresholdsDTO](docs/Model/PriceCompetitivenessThresholdsDTO.md)
@@ -862,13 +1002,17 @@ Class | Method | HTTP request | Description
 - [SearchShipmentsResponse](docs/Model/SearchShipmentsResponse.md)
 - [SearchShipmentsResponseDTO](docs/Model/SearchShipmentsResponseDTO.md)
 - [SellingProgramType](docs/Model/SellingProgramType.md)
+- [SendMessageToChatRequest](docs/Model/SendMessageToChatRequest.md)
 - [SetFeedParamsRequest](docs/Model/SetFeedParamsRequest.md)
+- [SetOrderBoxLayoutRequest](docs/Model/SetOrderBoxLayoutRequest.md)
+- [SetOrderBoxLayoutResponse](docs/Model/SetOrderBoxLayoutResponse.md)
 - [SetOrderDeliveryDateRequest](docs/Model/SetOrderDeliveryDateRequest.md)
 - [SetOrderDeliveryTrackCodeRequest](docs/Model/SetOrderDeliveryTrackCodeRequest.md)
 - [SetOrderShipmentBoxesRequest](docs/Model/SetOrderShipmentBoxesRequest.md)
 - [SetOrderShipmentBoxesResponse](docs/Model/SetOrderShipmentBoxesResponse.md)
 - [SetReturnDecisionRequest](docs/Model/SetReturnDecisionRequest.md)
 - [SetShipmentPalletsCountRequest](docs/Model/SetShipmentPalletsCountRequest.md)
+- [ShelfsStatisticsAttributionType](docs/Model/ShelfsStatisticsAttributionType.md)
 - [ShipmentActionType](docs/Model/ShipmentActionType.md)
 - [ShipmentBoxesDTO](docs/Model/ShipmentBoxesDTO.md)
 - [ShipmentDTO](docs/Model/ShipmentDTO.md)
@@ -881,33 +1025,38 @@ Class | Method | HTTP request | Description
 - [SkuBidItemDTO](docs/Model/SkuBidItemDTO.md)
 - [SkuBidRecommendationItemDTO](docs/Model/SkuBidRecommendationItemDTO.md)
 - [SortOrderType](docs/Model/SortOrderType.md)
-- [StockDTO](docs/Model/StockDTO.md)
-- [StockItemDTO](docs/Model/StockItemDTO.md)
-- [StockType](docs/Model/StockType.md)
 - [SuggestOfferPriceDTO](docs/Model/SuggestOfferPriceDTO.md)
 - [SuggestPricesRequest](docs/Model/SuggestPricesRequest.md)
 - [SuggestPricesResponse](docs/Model/SuggestPricesResponse.md)
 - [SuggestPricesResultDTO](docs/Model/SuggestPricesResultDTO.md)
 - [SuggestedOfferDTO](docs/Model/SuggestedOfferDTO.md)
 - [SuggestedOfferMappingDTO](docs/Model/SuggestedOfferMappingDTO.md)
+- [TariffDTO](docs/Model/TariffDTO.md)
+- [TariffParameterDTO](docs/Model/TariffParameterDTO.md)
+- [TariffType](docs/Model/TariffType.md)
 - [TimePeriodDTO](docs/Model/TimePeriodDTO.md)
 - [TimeUnitType](docs/Model/TimeUnitType.md)
 - [TrackDTO](docs/Model/TrackDTO.md)
 - [TransferOrdersFromShipmentRequest](docs/Model/TransferOrdersFromShipmentRequest.md)
 - [TurnoverDTO](docs/Model/TurnoverDTO.md)
 - [TurnoverType](docs/Model/TurnoverType.md)
+- [UnitDTO](docs/Model/UnitDTO.md)
 - [UpdateBusinessOfferPriceDTO](docs/Model/UpdateBusinessOfferPriceDTO.md)
 - [UpdateBusinessPricesRequest](docs/Model/UpdateBusinessPricesRequest.md)
 - [UpdateCampaignOfferDTO](docs/Model/UpdateCampaignOfferDTO.md)
 - [UpdateCampaignOffersRequest](docs/Model/UpdateCampaignOffersRequest.md)
 - [UpdateMappingDTO](docs/Model/UpdateMappingDTO.md)
+- [UpdateMappingsOfferDTO](docs/Model/UpdateMappingsOfferDTO.md)
 - [UpdateOfferContentRequest](docs/Model/UpdateOfferContentRequest.md)
 - [UpdateOfferContentResponse](docs/Model/UpdateOfferContentResponse.md)
 - [UpdateOfferContentResultDTO](docs/Model/UpdateOfferContentResultDTO.md)
 - [UpdateOfferDTO](docs/Model/UpdateOfferDTO.md)
 - [UpdateOfferMappingDTO](docs/Model/UpdateOfferMappingDTO.md)
+- [UpdateOfferMappingEntryDTO](docs/Model/UpdateOfferMappingEntryDTO.md)
 - [UpdateOfferMappingEntryRequest](docs/Model/UpdateOfferMappingEntryRequest.md)
+- [UpdateOfferMappingResultDTO](docs/Model/UpdateOfferMappingResultDTO.md)
 - [UpdateOfferMappingsRequest](docs/Model/UpdateOfferMappingsRequest.md)
+- [UpdateOfferMappingsResponse](docs/Model/UpdateOfferMappingsResponse.md)
 - [UpdateOrderItemRequest](docs/Model/UpdateOrderItemRequest.md)
 - [UpdateOrderStatusDTO](docs/Model/UpdateOrderStatusDTO.md)
 - [UpdateOrderStatusRequest](docs/Model/UpdateOrderStatusRequest.md)
@@ -919,11 +1068,14 @@ Class | Method | HTTP request | Description
 - [UpdateOutletLicenseRequest](docs/Model/UpdateOutletLicenseRequest.md)
 - [UpdatePriceWithDiscountDTO](docs/Model/UpdatePriceWithDiscountDTO.md)
 - [UpdatePricesRequest](docs/Model/UpdatePricesRequest.md)
+- [UpdateStockDTO](docs/Model/UpdateStockDTO.md)
+- [UpdateStockItemDTO](docs/Model/UpdateStockItemDTO.md)
 - [UpdateStocksRequest](docs/Model/UpdateStocksRequest.md)
 - [UpdateTimeDTO](docs/Model/UpdateTimeDTO.md)
 - [ValueRestrictionDTO](docs/Model/ValueRestrictionDTO.md)
 - [VerifyOrderEacRequest](docs/Model/VerifyOrderEacRequest.md)
 - [VerifyOrderEacResponse](docs/Model/VerifyOrderEacResponse.md)
+- [WarehouseAddressDTO](docs/Model/WarehouseAddressDTO.md)
 - [WarehouseDTO](docs/Model/WarehouseDTO.md)
 - [WarehouseGroupDTO](docs/Model/WarehouseGroupDTO.md)
 - [WarehouseOfferDTO](docs/Model/WarehouseOfferDTO.md)
@@ -961,4 +1113,5 @@ vendor/bin/phpunit
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
 - API version: `LATEST`
+    - Generator version: `7.6.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

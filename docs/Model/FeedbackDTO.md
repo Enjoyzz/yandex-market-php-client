@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **comments** | [**\OpenAPI\Client\Model\FeedbackCommentDTO[]**](FeedbackCommentDTO.md) | Переписка автора отзыва с магазином. | [optional]
 **shop** | [**\OpenAPI\Client\Model\FeedbackShopDTO**](FeedbackShopDTO.md) |  | [optional]
 **resolved** | **bool** | Решена ли проблема автора отзыва:  * &#x60;true&#x60; — да. * &#x60;false&#x60; — нет.  Если проблема решена, около отзыва на странице магазина появляется соответствующая надпись. | [optional]
-**verified** | **bool** | Является ли отзыв рекомендованным:  * &#x60;true&#x60; — да. * &#x60;false&#x60; — нет.  {% note alert %}  Параметр устарел и не рекомендуется к использованию.  {% endnote %} | [optional]
+**verified** | **bool** | {% note warning \&quot;\&quot; %}  Этот параметр устарел. Не используйте его.  {% endnote %}  Является ли отзыв рекомендованным:  * &#x60;true&#x60; — да. * &#x60;false&#x60; — нет. | [optional]
 **recommend** | **bool** | Купил бы автор отзыва в магазине снова:  * &#x60;true&#x60; — да. * &#x60;false&#x60; — нет. | [optional]
 **grades** | [**\OpenAPI\Client\Model\FeedbackGradesDTO**](FeedbackGradesDTO.md) |  | [optional]
 **order** | [**\OpenAPI\Client\Model\FeedbackOrderDTO**](FeedbackOrderDTO.md) |  | [optional]

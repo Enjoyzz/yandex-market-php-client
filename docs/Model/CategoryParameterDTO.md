@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **id** | **int** | Идентификатор характеристики. |
 **name** | **string** | Название характеристики. | [optional]
 **type** | [**\OpenAPI\Client\Model\ParameterType**](ParameterType.md) |  |
+**unit** | [**\OpenAPI\Client\Model\CategoryParameterUnitDTO**](CategoryParameterUnitDTO.md) |  | [optional]
 **description** | **string** | Описание характеристики. | [optional]
 **recommendation_types** | [**\OpenAPI\Client\Model\OfferCardRecommendationType[]**](OfferCardRecommendationType.md) | Перечень возможных рекомендаций по заполнению карточки, к которым относится данная характеристика. | [optional]
 **required** | **bool** | Обязательность характеристики. |

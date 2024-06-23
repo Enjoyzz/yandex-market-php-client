@@ -4,8 +4,8 @@ All URIs are relative to https://api.partner.market.yandex.ru, except if the ope
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**generateOrderLabel()**](OrderLabelsApi.md#generateOrderLabel) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/shipments/{shipmentId}/boxes/{boxId}/label | Ярлык‑наклейка на отдельное грузовое место в заказе |
-| [**generateOrderLabels()**](OrderLabelsApi.md#generateOrderLabels) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/labels | Ярлыки‑наклейки на все грузовые места в заказе |
+| [**generateOrderLabel()**](OrderLabelsApi.md#generateOrderLabel) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/shipments/{shipmentId}/boxes/{boxId}/label | Ярлык‑наклейка для коробки в заказе |
+| [**generateOrderLabels()**](OrderLabelsApi.md#generateOrderLabels) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/labels | Ярлыки‑наклейки на все коробки в одном заказе |
 | [**getOrderLabelsData()**](OrderLabelsApi.md#getOrderLabelsData) | **GET** /campaigns/{campaignId}/orders/{orderId}/delivery/labels/data | Информация на ярлыках‑наклейках |
 
 
@@ -15,9 +15,9 @@ All URIs are relative to https://api.partner.market.yandex.ru, except if the ope
 generateOrderLabel($campaign_id, $order_id, $shipment_id, $box_id, $format): \SplFileObject
 ```
 
-Ярлык‑наклейка на отдельное грузовое место в заказе
+Ярлык‑наклейка для коробки в заказе
 
-Формирует ярлык‑наклейку на отдельное грузовое место в заказе и возвращает ярлык в PDF‑файле.  |**⚙️ Лимит:** 1 000 000 запросов в час| |-|
+Формирует ярлык‑наклейку для коробки в заказе и возвращает ярлык в PDF‑файле.  |**⚙️ Лимит:** 1 000 000 запросов в час| |-|
 
 ### Example
 
@@ -38,8 +38,8 @@ $apiInstance = new OpenAPI\Client\Api\OrderLabelsApi(
 );
 $campaign_id = 56; // int | Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html)
 $order_id = 56; // int | Идентификатор заказа.
-$shipment_id = 56; // int | Идентификатор грузоместа
-$box_id = 56; // int | Идентификатор коробки
+$shipment_id = 56; // int | Идентификатор грузоместа.
+$box_id = 56; // int | Идентификатор коробки.
 $format = new \OpenAPI\Client\Model\PageFormatType(); // PageFormatType | Настройка размещения ярлыков на странице. Если параметра нет, возвращается PDF с ярлыками формата A6.
 
 try {
@@ -56,8 +56,8 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **campaign_id** | **int**| Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html) | |
 | **order_id** | **int**| Идентификатор заказа. | |
-| **shipment_id** | **int**| Идентификатор грузоместа | |
-| **box_id** | **int**| Идентификатор коробки | |
+| **shipment_id** | **int**| Идентификатор грузоместа. | |
+| **box_id** | **int**| Идентификатор коробки. | |
 | **format** | [**PageFormatType**](../Model/.md)| Настройка размещения ярлыков на странице. Если параметра нет, возвращается PDF с ярлыками формата A6. | [optional] |
 
 ### Return type
@@ -83,9 +83,9 @@ try {
 generateOrderLabels($campaign_id, $order_id, $format): \SplFileObject
 ```
 
-Ярлыки‑наклейки на все грузовые места в заказе
+Ярлыки‑наклейки на все коробки в одном заказе
 
-Возвращает PDF-файл с ярлыками, которые нужно наклеить на посылки перед отгрузкой. Подробно о том, зачем они нужны и как выглядят, рассказано [в Справке](https://yandex.ru/support/marketplace/orders/fbs/packaging/marking.html).  На вход нужно передать идентификатор заказа и один необязательный параметр, который управляет версткой PDF-файла.  |**⚙️ Лимит:** 1 000 000 запросов в час| |-|
+Возвращает PDF-файл с ярлыками, которые нужно наклеить на коробки перед отгрузкой. Подробно о том, зачем они нужны и как выглядят, рассказано [в Справке Маркета для продавцов](https://yandex.ru/support/marketplace/orders/fbs/packaging/marking.html).  На вход нужно передать идентификатор заказа и один необязательный параметр, который управляет версткой PDF-файла.  |**⚙️ Лимит:** 1 000 000 запросов в час| |-|
 
 ### Example
 
@@ -149,7 +149,7 @@ getOrderLabelsData($campaign_id, $order_id): \OpenAPI\Client\Model\GetOrderLabel
 
 Информация на ярлыках‑наклейках
 
-Возвращает информацию на ярлыках, которые клеятся на грузовые места в заказе.  |**⚙️ Лимит:** 1 000 000 запросов в час| |-|
+Возвращает информацию на ярлыках, которые клеятся на коробки в заказе.  |**⚙️ Лимит:** 1 000 000 запросов в час| |-|
 
 ### Example
 
